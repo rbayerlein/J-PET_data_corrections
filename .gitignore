@@ -31,10 +31,9 @@
 *.out
 *.app
 
+
 # Folders
 singles2randoms4d_castor/
 
 # additional files
 program_names.odt
-
-

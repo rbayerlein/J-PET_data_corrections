@@ -49,7 +49,7 @@ struct Lm_out
 	uint32_t c1, c2;	
 };
 
-void UpdateHeader(const string& inputFile, const string& outputFile, const string& oldWord, const string& newWord, bool apply_SC);
+void UpdateHeader(const string& inputFile, const string& outputFile, const string& oldWord, const string& newWord, long num_events_in_output_data, bool apply_SC);
 string getFileName(const string& fullPath);
 
 int main(int argc, char const *argv[])
@@ -131,6 +131,7 @@ int main(int argc, char const *argv[])
 	while (!feof(pfile_in)){
 		int read_count = fread(plm_in, sizeof(Lm), 1, pfile_in);
 		read_count_total+=read_count;
+		float sc;
 		if(read_count==0) continue;
 
 	// get axial and transaxial coordinates
@@ -155,12 +156,9 @@ int main(int argc, char const *argv[])
 		}
 		short tof_offset = floor(N_TOF/2);
 		if (TOF_AB+tof_offset > N_TOF-1 || TOF_AB+tof_offset < 0) {
-			
 			/*cout << "filtered event: tof out of range!" << endl;*/ read_count_invalid_tof++; continue;
 		}
 		
-		read_count_total++;
-
 
 	// calculate transaxial sinogram index
 		int idx_tx_blk = blk_idx[txBiA][txBiB]; // transaxial sinogram index
@@ -177,10 +175,11 @@ int main(int argc, char const *argv[])
             ind_blk_sino = idx_tx_blk + SIZEOF_SINO * axBiA
 			+ SIZEOF_SINO * N_AX_BLK * axBiB+ SIZEOF_SINO * N_AX_BLK * N_AX_BLK*(TOF_AB+tof_offset);
 		}
-		float sc;
+		
 		if (ind_blk_sino <0||ind_blk_sino>(TOTAL_SINO_SIZE-1)) { // provides fault tolerance
                    //ind_blk_sino <0 represents crystal-based UIH listmode out-of-bound zhoujian's sinogram,
                    //idx_tx_blk==SIZEOF_SINO*N_AX_BLK*N_AX_BLK*N_TOF-1 represents BLK-based listmodeID covered by zhoujian's sinogram, but some of crystal UIH listmode out-of-bound because of integer division in C is equivalent to matlab 'fix', which make the one last entry of sinogram has very high value .
+                    sc=0;
                     read_count_outof_traxial_tof++;
 		}
 		else {
@@ -197,10 +196,11 @@ int main(int argc, char const *argv[])
 		fwrite(plm_out, sizeof(Lm_out), 1, pfile_out);	    
 
 	}//end of while
-	cout << "Total number of events out of bounds: " << read_count_outof_traxial_tof << " (" << (float)read_count_outof_traxial_tof/read_count_total*100 << " % of all events)" << endl;
+	cout << "Total number of events out of bounds (but accepted): " << read_count_outof_traxial_tof << " (" << (float)read_count_outof_traxial_tof/read_count_total*100 << " % of all events)" << endl;
 	cout << "Total number of events processed: " << read_count_total << endl;
-	cout << "Total number of events with wrong TOF information: " << read_count_invalid_tof << " (" << (float)read_count_invalid_tof/read_count_total*100 << " % of all events)" << endl;
-
+	cout << "Total number of events with wrong TOF information (rejected): " << read_count_invalid_tof << " (" << (float)read_count_invalid_tof/read_count_total*100 << " % of all events)" << endl;
+	long num_events_in_output_data = read_count_total-read_count_invalid_tof;
+	cout << "Total number of events in final data set: " << read_count_total-read_count_invalid_tof << endl;
 // close everything
 	delete[] plut;
 	fclose(pfile_lut);
@@ -229,7 +229,7 @@ int main(int argc, char const *argv[])
     cout << old_fname << "\t" << new_fname << endl;
 
     // make update of the header file
-    UpdateHeader(inputFileName, outputFileName, old_fname, new_fname, true);
+    UpdateHeader(inputFileName, outputFileName, old_fname, new_fname, num_events_in_output_data, true);
 
 
 
@@ -241,7 +241,7 @@ int main(int argc, char const *argv[])
 
 // Additional functions
 
-void UpdateHeader(const string& inputFile, const string& outputFile, const string& oldWord, const string& newWord, bool apply_SC) {
+void UpdateHeader(const string& inputFile, const string& outputFile, const string& oldWord, const string& newWord, long newEventCount, bool apply_SC) {
     // Open the input file for reading
     ifstream inFile(inputFile);
     if (!inFile.is_open()) {
@@ -260,6 +260,20 @@ void UpdateHeader(const string& inputFile, const string& outputFile, const strin
     while ((pos = fileContent.find(oldWord, pos)) != string::npos) {
         fileContent.replace(pos, oldWord.length(), newWord);
         pos += newWord.length(); // Move past the new word
+    }
+
+    // UPdate "Number of events: ..."
+    string searchString = "Number of events: ";
+    pos = fileContent.find(searchString);
+    if (pos != string::npos) {
+        // Find the end of the line
+        size_t endPos = fileContent.find('\n', pos);
+        if (endPos != string::npos) {
+            // Replace the entire line with the new number of events
+            string newEventCount_str = to_string(newEventCount);
+            string newLine = searchString + newEventCount_str;
+            fileContent.replace(pos, endPos - pos, newLine);
+        }
     }
 
     // Append the line "Random correction flag: 1" at the end

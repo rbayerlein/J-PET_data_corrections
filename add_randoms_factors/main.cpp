@@ -33,6 +33,7 @@ struct Lut {
 
 struct Lm {
 	uint32_t time;
+	float nf;
 	float tof;
 	uint32_t c1, c2;	// castor crystal ids of crystals one and two
 };
@@ -41,6 +42,7 @@ struct Lm_out
 {
 	uint32_t time;
 	float rr;	// randoms rate
+	float nf;
 	float tof;
 	uint32_t c1, c2;	
 };
@@ -163,6 +165,7 @@ int main(int argc, char const *argv[])
 		plm_out->rr=rr;
 		plm_out->time=plm_in->time;
 		plm_out->tof=plm_in->tof;
+		plm_out->nf=plm_in->nf;
 
 		fwrite(plm_out, sizeof(Lm_out), 1, pfile_out);
 	}

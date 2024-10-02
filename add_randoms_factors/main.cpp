@@ -41,7 +41,7 @@ struct Lm {
 struct Lm_out
 {
 	uint32_t time;
-	float rr;	// randoms rate
+	float rr;	// randoms rate per LOR
 	float nf;
 	float tof;
 	uint32_t c1, c2;	

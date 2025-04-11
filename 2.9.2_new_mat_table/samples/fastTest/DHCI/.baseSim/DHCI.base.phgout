@@ -1,0 +1,195 @@
+
+
+
+Command line: ../../../../../2.6.2.6/bin/phg DHCI.base.phgin 
+
+Execution of phg occurred on 04 15 2009 (10:39:59 PM)
+Simulating PET.
+Stratification is off.
+Forced Detection is off.
+Forced non-absorption is off.
+Modelling positron range is on.
+	Isotope being modelled is c11
+Modelling non-collinearity is off.
+Modelling coherent scatter in object is off.
+Modelling coherent scatter in tomograph is off.
+Modelling polarization is off.
+Photon energy is            511.0 keV.
+Minimum energy threshold is 150.0
+Acceptance angle is (+/-) 90.0 degrees.
+Sine of acceptance angle is 1.000.
+Number of decays to simulate = 130000000.
+Decay time = 60 seconds.
+Collimator modelling is on.
+Detector modelling is on.
+Binning is on.
+Creation of target-cylinder history file is off.
+Debug options = 0.
+Voxel as point source is on.
+Voxel as line source is off.
+Random seed is 1563160983  (from system clock).
+
+ Collimator Parameters for 'DHCI.base.colparms'
+
+	Collimator is a slat model
+		The number of layers is 2
+			For layer 0
+			Inner radius = 10.00 cm  outer radius is 12.00 cm
+			There are 4 slats:
+				Start = -6.00 cm End is -5.95 cm Material = aluminum
+				Start = -5.95 cm End is -2.05 cm Material = air
+				Start = -2.05 cm End is -1.95 cm Material = lead
+				Start = -1.95 cm End is 1.95 cm Material = air
+				Start = 1.95 cm End is 2.05 cm Material = lead
+				Start = 2.05 cm End is 5.95 cm Material = air
+				Start = 5.95 cm End is 6.00 cm Material = aluminum
+
+			For layer 1
+			Inner radius = 12.00 cm  outer radius is 14.00 cm
+			There are 3 slats:
+				Start = -6.00 cm End is -4.05 cm Material = air
+				Start = -4.05 cm End is -3.95 cm Material = lead
+				Start = -3.95 cm End is -0.05 cm Material = air
+				Start = -0.05 cm End is 0.05 cm Material = aluminum
+				Start = 0.05 cm End is 3.95 cm Material = air
+				Start = 3.95 cm End is 4.05 cm Material = lead
+				Start = 4.05 cm End is 6.00 cm Material = air
+
+
+ Detector Parameters for 'DHCI.base.detparms'
+
+	Detector type is dual-headed planar
+	Forced interaction is on
+	Number of layers in detector is 2
+	Layer 0 is 'aluminum', depth = 0.100, status = not active
+	Layer 1 is 'NaI', depth = 2.500, status = active
+	Inner radius of detector is 14.100
+	Transaxial length of detector is 30.000
+	Axial length of detector is 12.000
+	Radial depth of detector is 2.600
+	Detector rotation is continuous
+	Minimum detector angle = 0.00 radians
+	Maximum detector angle = 3.14 radians
+	Detector energy is being blurred by a  Gaussian
+	Energy resolution = 10.0%
+	Reference energy = 511.0
+	Detector is being modelled with perfect time-of-flight resolution
+
+ Binning Parameters for DHCI.base.binparms
+
+	 Binning parameters are ordered by:
+	 slowest varying to fastest (top of this list to bottom).
+
+	  There are two scatter bins,
+	    the first contains primary (unscattered photons),
+	    the second contains photon's whose scatter count
+	    falls in the range [0, 100]
+	  Number of energy (1) bins = 2, range = [275.00, 675.00] (keV)
+	  Number of energy (2) bins = 2, range = [275.00, 675.00] (keV)
+	  Number of Z axis (1) bins = 3, range [-6.00, 6.00] (cm)
+	  Number of Z axis (2) bins = 3, range [-6.00, 6.00] (cm)
+	  Number of transaxial dist. bins = 5, range = [-10.00, 10.00] (cm)
+	  Number of azimuthal angle bins = 8, range = [0.00, 3.14] (radians)
+
+	  Add to existing images is false.
+
+	  Weight data is being summed in double precision
+	  Weight image format is four byte reals.
+	  Weight image file name is '../DHCI.base.wt'
+
+	  Weight squared image format is four byte reals.
+	  Weight squared image file name is '../DHCI.base.wtsq'
+
+	  Count image format is four byte integers.
+	  Count image file name is '../DHCI.base.ct'
+
+***************** Simulation Beginning *************
+  10% tracked,	CPU Time = 287 seconds	(10:44 PM - 04/15/09).
+  20% tracked,	CPU Time = 573 seconds	(10:49 PM - 04/15/09).
+  30% tracked,	CPU Time = 860 seconds	(10:54 PM - 04/15/09).
+  40% tracked,	CPU Time = 1147 seconds	(10:59 PM - 04/15/09).
+  50% tracked,	CPU Time = 1434 seconds	(11:04 PM - 04/15/09).
+  60% tracked,	CPU Time = 1720 seconds	(11:09 PM - 04/15/09).
+  70% tracked,	CPU Time = 2007 seconds	(11:14 PM - 04/15/09).
+  80% tracked,	CPU Time = 2294 seconds	(11:18 PM - 04/15/09).
+  90% tracked,	CPU Time = 2581 seconds	(11:23 PM - 04/15/09).
+ 100% tracked,	CPU Time = 2868 seconds	(11:28 PM - 04/15/09).
+
+***************** Simulation Finished *************
+
+
+
+Tracked 260000000 photons.
+
+Real time for calculating time bin decays = 0.8 seconds.
+Real time for tracking photons = 28675036.5 seconds.
+Total CPU time for calculating time bin decays = 0.8 seconds.
+Total CPU time for tracking photons  = 28675036.5. seconds
+
+CPU time for simulation =  28675037.3.
+Execution of PHG finished on 04 15 2009 (11:28:38 PM)
+
+
+
+***************** Collimated Photon Statistics *************
+
+Total blue photons reaching collimator in coincidence = 51400048.
+Total pink photons reaching collimator in coincidence = 51400048.
+
+Total blue photons passing collimator = 12240255.
+Total pink photons passing collimator = 12248503.
+
+Total blue photon weight reaching collimator = 1.5605e+08.
+Total pink photon weight reaching collimator = 1.5605e+08.
+Total coincidence weight reaching collimator = 1.5605e+08.
+
+Total blue photon weight passing collimator = 3.7160e+07.
+Total pink photon weight passing collimator = 3.7185e+07.
+Total coincidence weight passing collimator = 1.1290e+07.
+
+Total blue photon weight rejected by collimator = 1.1889e+08.
+Total pink photon weight rejected by collimator = 1.1886e+08.
+Total weight of object-scattered photons leaving collimator without interacting = 3.350844e+07.
+Total weight of primary photons leaving collimator without interacting = 3.943852e+07.
+
+****************************************************************
+
+
+***************** Detected Photon Statistics *************
+
+Total blue photons entering detector module = 12240255.
+Total pink photons entering detector module = 12248503.
+Total photons depositing energy in detector = 23292230.
+Total photons absorbed in detector = 16088506.
+Total weight absorbed in detector = 3.42e+07.
+Total photons forced to absorb in detector = 0.
+Total weight forced to absorb in detector = 0.00e+00.
+Total first interaction absorptions = 6836106.
+Total weight of first interaction absorptions = 1.55e+07.
+Total photons passing through crystal without interacting = 0.
+Weight decremented for FI = 8.40e+06
+	
+
+****************************************************************
+
+
+***************** Processing Binning Data *************
+
+Total blue photons reaching the binning module in this simulation = 11643053
+Total pink photons reaching the binning module in this simulation = 11649177
+
+Total coincidences reaching the binning module in this simulation = 3405485
+Total accepted blue photons in this simulation = 1979842
+Total accepted pink photons in this simulation = 1152423
+Total accepted coincidences in this simulation = 1120164
+Sum of accepted coincidence weights in this simulation = 1.212728e+06
+Sum of accepted coincidence squared weights in this simulation = 1.413309e+06
+Quality factor in image data = 9.29e-01
+
+Writing count image.
+Writing weight image.
+	Converting weight file to single precision, this may take a while.
+Writing weight squared image.
+	Converting weight squared file to single precision, this may take a while.
+
+***************** Finished Processing Binning Data *************

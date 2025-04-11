@@ -3,8 +3,20 @@
 // 
 // conversion from listmode files into sinograms for jPET
 // ************************************************************************
-#define SIZEOF_SINO (51*39) // used to be: 51*39 207*156
-#define N_TX_BLK 78 		// used to be: 312
+// #######################################################################################
+// Parameters for 1x8 rebinning (transaxial x axial):
+/*
+#define SIZEOF_SINO 207*156
+#define N_TX_BLK 312
+#define N_AX_CRYS_WGAP 200
+#define N_TX_CRYS_PER_BLK 1
+#define N_AX_CRYS_PER_BLK 8 
+#define N_AX_BLK 25
+*/
+// #######################################################################################
+// Parameters for 4x8 rebinning (transaxial x axial):
+#define SIZEOF_SINO 51*39
+#define N_TX_BLK 78
 #define N_AX_CRYS_WGAP 200
 #define N_TX_CRYS_PER_BLK 4
 #define N_AX_CRYS_PER_BLK 8 

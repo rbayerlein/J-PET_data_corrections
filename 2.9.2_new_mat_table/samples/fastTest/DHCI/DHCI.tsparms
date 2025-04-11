@@ -1,0 +1,22 @@
+##############################################################################
+#
+#       PARAMETERS FILE FOR A PHG HISTORY FILE TIME SORT
+#
+#       RUN NAME:	WHATEVER
+#       CREATED:	August 2005
+#       OWNER:		SimSET Example
+#
+#	This is a parameters file for a history file time sort
+#
+##############################################################################
+
+# INPUT HISTORY FILE
+STR     history_file = "DHCI.colhist"
+
+# SORTED (OUTPUT) HISTORY FILE
+STR     sorted_history_file = "DHCI.colhist.srtd"
+
+
+# BUFFER MEMORY SIZE (IN BYTES)
+INT		buffer_size					= 100
+

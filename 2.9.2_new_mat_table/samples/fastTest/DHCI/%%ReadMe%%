@@ -1,0 +1,54 @@
+This directory contains parameter files and data for a SimSET simulation. The
+simulation can be run using the command runDHCI.sh, and the resulting data
+can be analyzed using analyzeDHCI.sh.  These commands can also be run from
+the parent directory (along with similar commands in the sibling directories)
+using the commands runFast.sh and resultsFast.sh.
+
+The object simulated is described in the %%ReadMe%% file in the parent directory.
+This simulation has importance sampling in the object, models positron
+range but not non-collinearity, and does not model coherent scatter.
+(See DHCI.phgin.)
+
+The tomograph is a dual-headed coincidence imager (DHCI) using two planar
+detectors.
+
+The collimator is a slat collimator consisting of two layers.  The first layer
+has fours slats, two aluminum slats at the edges of the axial field-of-view
+and two lead slats within the FOV.  The second layer has 3 slats, a lead slat,
+an aluminum slat, and a lead slat.  (See DHCI.colparms.)
+
+The modeled detectors are 2.5 cm NaI with a 0.1 cm aluminum front cover.
+The detectors have 10% FWHM energy resolution.  (See DHCI.detparms.)
+
+The data is binned into two scatter bins (true vs. scatter), 3x3 z bins
+(3 z bins for each photon), 2x2 energy bins (2 bins for each photon), 5
+transaxial distance bins and 8 azimuthal angle bins (phi).  (See
+DHCI.binparms.)
+
+runDHCI.sh runs a partial second simulation using a collimator history file
+created during the first simulation.  The simulation is picked up after
+the collimator module using the history file as input.
+
+The script analyzeDHCI.sh compares the results from the two simulations with
+results from an earlier version of SimSET.  The comparisons are made using
+the SimSET utility 'ttest', which performs a t-test on the data bin-by-bin.
+analyzeDHCI.sh gives a summary of ttest's output for each simulation, e.g.:
+
+Minimum T-Test value = -3.344
+Maximum T-Test value = 3.487
+
+0.0 <= |T-Test| <= 1.0          = 1182 => %67.97
+0.0 <= |T-Test| <= 2.0          = 1671 => %96.09
+0.0 <= |T-Test| <= 3.0          = 1733 => %99.65
+0.0 <= |T-Test| <= 3.49         = 1739, => %100.00
+
+
+The absolute value of the ttest should be less than 1 approximately 67% of
+the time, less than 2 approximately 95% of the time, and less than 3 over
+99% of the time.  For this test the maximum absolute value of the
+ttest should be between 2.5 and 4.5.  The random nature of the data may lead
+to a higher value on occasion, but the higher value should disappear if
+the simulation and analysis are rerun.
+
+If SimSET fails these conditions, further testing may be necessary.  Please
+contact us at simset@u.washington.edu.

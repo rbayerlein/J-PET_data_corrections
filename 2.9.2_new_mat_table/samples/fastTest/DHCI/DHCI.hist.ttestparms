@@ -1,0 +1,14 @@
+DHCI.base.ct
+DHCI.base.wt
+DHCI.base.wtsq
+DHCI.hist.ct
+DHCI.hist.wt
+DHCI.hist.wtsq
+
+y
+n
+y
+10
+-5
+5
+n

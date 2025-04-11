@@ -1,0 +1,131 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	randPET
+#       CREATED:	Dec 2008
+#       OWNER:		SimSET
+#
+#	This file gives the binning parameters for
+#	the fastTest simulation randPET base simulation.
+#
+##############################################################################
+
+#
+# Trues/Scatter/Randoms binning options
+############################
+#
+# The user chooses whether to accept random events (for PET), the minimum
+# and maximum number of scatters to accept, and a scatter_random_param 
+# that specifies how to histogram the primaries, scatter and randoms.
+# 
+# The scatter_random_param can take on values 0 to 10. The most commonly
+# used values are scatter_random_param = 0, which bins all trues,
+# scatters, and randoms together; scatter_random_param = 1, which bins
+# trues and scatter separately (for PET an event is considered a
+# scattered event if either of the coincident photons are scattered,
+# whether it is a prompt or random event); and scatter_random_param = 6,
+# available for PET only, which bins trues, scatters, and randoms 
+# separately.
+#
+# To see a detailed description of all the choices for the
+# scatter_random_param, visit the Binning Module page of the User Guide
+# on the SimSET web pages.
+#
+BOOL    accept_randoms = true
+INT		scatter_random_param	=	6
+INT		min_s			=	0
+INT		max_s			=	100
+
+#
+# Z axis binning
+############################
+INT		num_z_bins		=	1
+REAL	min_z			=	-10.0
+REAL	max_z			=	10.0
+
+#
+# Energy binning in keV
+############################
+INT	num_e_bins		=	1
+REAL	min_e			=	400.0
+REAL	max_e			=	650.0
+
+#
+# 3D-RP binning parameters (SimSET does not do the
+# reconstruction, just does the binning)
+############################
+# 3DRP 'phi'
+#	Range = [0, pi]
+INT		num_phi_bins = 15
+
+# 3DRP 'theta'
+#	min_theta always = -max_theta
+#	Specify in degrees
+INT		num_theta_bins = 3
+REAL	max_theta = 10.0
+
+# 3DRP 'Xr'
+INT		num_xr_bins = 5
+REAL	min_xr = -26.25
+REAL	max_xr = 26.25
+
+# 3DRP 'Yr'
+INT		num_yr_bins = 5
+REAL	min_yr = -10.0
+REAL	max_yr = 10.0
+
+# MSRB or SSRB?
+BOOL do_msrb = false
+BOOL do_ssrb = false
+
+# Detector radius
+#	Typically the inner radius of the detector 
+REAL	detector_radius = 0.0
+
+
+#
+# Output files specification
+############################
+
+# Specification of weight image data type
+# Weight weight_image_type = 2 for four byte reals
+# Weight weight_image_type = 3 for 8 byte reals
+INT		weight_image_type	= 2
+
+# Specification of count image data type
+# Weight weight_image_type = 0 for one byte integers
+# Weight weight_image_type = 1 for two byte integers
+# Weight weight_image_type = 2 for four byte integers
+INT		count_image_type	= 2
+
+# Should the output from this simulation be added to output from
+# an earlier run?  (Only works if the count-, weight-, and
+# weight-squared- files have the same file names.)
+BOOL	add_to_existing_img = false
+
+# Path to the binned values of photon weights
+STR		weight_image_path			= "../randPET.base.wt"
+
+# Path to the binned values of photon weights squared.
+STR		weight_squared_image_path	= "../randPET.base.wtsq"
+
+# Path to the binned values of absolute photons count
+STR		count_image_path			= "../randPET.base.ct"
+
+
+#
+# Run-time precision
+############################
+
+# When the following value is set to false (or omitted), the weight
+# and weight-squared values are summed in double precision (eight-byte)
+# even if single precision (four-byte) output is requested.  The output
+# will be more accurate if this variable is set to false, but SimSET
+# will require more memory.
+#  
+# We suggest this parameter is left false, however, for some simulations
+# SimSET's memory requirements may be so great as to require that it be
+# be set true.
+BOOL    sum_according_to_type   = false
+

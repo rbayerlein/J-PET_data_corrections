@@ -1,0 +1,44 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	randPET
+#       CREATED:	Dec 2008
+#       OWNER:		SimSET
+#
+#	This file gives parameters for a 3d PET collimator.
+#	It is intended for use with the fastTest simulation
+#	randPET.
+#
+#	The collimator is only a narrow annulus of air.
+#
+##############################################################################
+
+# Specify the collimator type
+# Set collimator_type = simple_pet
+# Set collimator_type = monte_carlo_pet
+# Set collimator_type = simple_spect
+# Set collimator_type = unc_spect
+
+# This will be a Monte-Carlo PET collimator
+ENUM collimator_type = monte_carlo_pet
+
+# We have one layer in the collimator
+NUM_ELEMENTS_IN_LIST	layers_list = 1
+
+	# The layer consists of one segment of air.
+	NUM_ELEMENTS_IN_LIST	segment_list = 1
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			# The segment is "parallel", which is to say it has a
+			# rectangular profile in the z-r plane.
+			ENUM		seg_type = parallel
+			INT			material = 0
+			REAL		inner_radius = 29.0
+			REAL		outer_radius = 30.0
+			REAL		inner_min_z = -10.0
+			REAL		inner_max_z =  10.0
+
+# Specify output file for history (empty string for no history file)
+STR	history_file = ""

@@ -1,0 +1,5 @@
+This directory contains the object used in the fastTest simulations
+(fastTest.act_indexes and fastTest.att_indexes) and files used by
+the stratification algorithm (*.prod).  A description of the object
+can be found in the parent directory.  For more information about
+stratification, visit our web site.

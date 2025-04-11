@@ -1,0 +1,177 @@
+REAL	ring_x_inner_radius = 39.30000000000000
+REAL	ring_x_outer_radius = 42.11000000000000
+REAL	ring_y_inner_radius = 39.30000000000000
+REAL	ring_y_outer_radius = 42.11000000000000
+REAL	ring_z_minimum = -11.97900000000000
+REAL	ring_z_maximum = 11.97900000000000
+
+NUM_ELEMENTS_IN_LIST	ring_num_blocks_in_ring = 24
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 0.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 15.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 30.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 45.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 60.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 75.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 90.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 105.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 120.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 135.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 150.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 165.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 180.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 195.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 210.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 225.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 240.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 255.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 270.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 285.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 300.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 315.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 330.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+
+	NUM_ELEMENTS_IN_LIST	ring_block_description_list = 5
+		STR	ring_block_parameter_file = "@simset/repo/scanner/uexplorer/module.blockparms"
+		REAL	ring_block_radial_position = 39.30000000000000
+		REAL	ring_block_angular_position = 345.00000000000000
+		REAL	ring_block_z_position = 0.00000000000000
+		REAL	ring_block_transaxial_orientation = 0.00000000000000
+

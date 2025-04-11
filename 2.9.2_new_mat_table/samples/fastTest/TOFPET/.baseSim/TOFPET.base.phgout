@@ -1,0 +1,227 @@
+
+
+
+Command line: ../../../../../2.9/bin/phg TOFPET.base.phgin 
+
+Execution of phg occurred on 04 15 2009 (10:00:56 PM)
+Simulating PET (coincidences only).
+Stratification is off.
+Forced Detection is off.
+Forced non-absorption is off.
+Modelling positron range is on.
+	Isotope being modelled is c11
+Modelling non-collinearity is on.
+Modelling coherent scatter in object is off.
+Modelling coherent scatter in tomograph is on.
+Modelling polarization is off.
+Photon energy is            511.0 keV.
+Minimum energy threshold is 100.0
+Acceptance angle is (+/-) 90.0 degrees.
+Sine of acceptance angle is 1.000.
+Number of decays to simulate (user-supplied) = 75000000.
+Scan time =    60.000 seconds.
+Collimator modelling is on.
+Detector modelling is on.
+Binning is on.
+Creation of target-cylinder history file is off.
+Debug options = 0.
+Voxel as point source is on.
+Voxel as line source is off.
+Random seed is 1239858055  (from system clock).
+
+ Collimator Parameters for '../TOFPET.colparms'
+
+	Collimator is a Monte Carlo PET model
+		The number of layers is 1
+			For layer 0
+				Segment type is parallel
+				Max Z = -4.05 cm Min Z -6.00
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is air
+				Segment type is parallel
+				Max Z = -3.95 cm Min Z -4.05
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is tungsten
+				Segment type is parallel
+				Max Z = -2.05 cm Min Z -3.95
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is air
+				Segment type is parallel
+				Max Z = -1.95 cm Min Z -2.05
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is tungsten
+				Segment type is parallel
+				Max Z = -0.05 cm Min Z -1.95
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is air
+				Segment type is parallel
+				Max Z = 0.05 cm Min Z -0.05
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is tungsten
+				Segment type is parallel
+				Max Z = 1.95 cm Min Z 0.05
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is air
+				Segment type is parallel
+				Max Z = 2.05 cm Min Z 1.95
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is tungsten
+				Segment type is parallel
+				Max Z = 3.95 cm Min Z 2.05
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is air
+				Segment type is parallel
+				Max Z = 4.05 cm Min Z 3.95
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is tungsten
+				Segment type is parallel
+				Max Z = 6.00 cm Min Z 4.05
+				Inner Radius = 12.00 cm Outer Radius 16.00
+				Material is air
+
+ Detector Parameters for 'TOFPET.base.detparms'
+
+	Detector type is cylindrical
+	Forced interaction is off
+	Number of rings in detector is 1
+	Inner radius of detector is 16.000
+	Outer radius of detector is 18.000
+	Axial length of detector is 12.000
+	Ring 0 - 
+		layer 0 -
+			detector material index 18 = 'LSO'
+			inner radius = 16.00
+			outer radius = 18.00
+			minimum z = -6.00
+			maximum z = 6.00
+			status = active
+	Detector energy is being blurred by a  Gaussian
+	Energy resolution = 15.0%
+	Reference energy = 511.0
+	Photon time-of-detection is being blurred by a Gaussian
+	Photon time resolution (nanoseconds) = 0.424
+	Coincidence time-of-flight resolution (nanoseconds) = 0.600
+
+ Binning Parameters for TOFPET.base.binparms
+
+	 Single-Slice Rebinning is being performed
+
+	 Binning parameters are ordered by:
+	 slowest varying to fastest (top of this list to bottom).
+
+	  Random events are being rejected.
+
+	  All scatter states (primary, scatter) stored together.
+	  Number of scatter bins = 1, range = [0, 100] (# of scatters)
+	  Number of energy (1) bins = 1, range = [400.00, 650.00] (keV)
+	  Number of energy (2) bins = 1, range = [400.00, 650.00] (keV)
+	  Number of Z axis bins = 12, range [-6.00, 6.00] (cm)
+	  Number of transaxial dist. bins = 10, range = [-10.00, 10.00] (cm)
+	  Number of azimuthal angle bins = 15, range = [0.00, 3.14] (radians)
+	  Number of time-of-flight bins = 6, range = [-2.00, 2.00] (nanosecs)
+
+	  Add to existing images is false.
+
+	  Weight data is being summed in double precision
+	  Weight image format is four byte reals.
+	  Weight image file name is '../TOFPET.base.wt'
+
+	  Weight squared image format is four byte reals.
+	  Weight squared image file name is '../TOFPET.base.wtsq'
+
+	  Count image format is four byte integers.
+	  Count image file name is '../TOFPET.base.ct'
+
+***************** Simulation Beginning *************
+  10% tracked,	CPU Time =      85 seconds	(10:02 PM - 04/15/09).
+  20% tracked,	CPU Time =     170 seconds	(10:03 PM - 04/15/09).
+  30% tracked,	CPU Time =     254 seconds	(10:05 PM - 04/15/09).
+  40% tracked,	CPU Time =     339 seconds	(10:06 PM - 04/15/09).
+  50% tracked,	CPU Time =     424 seconds	(10:08 PM - 04/15/09).
+  60% tracked,	CPU Time =     509 seconds	(10:09 PM - 04/15/09).
+  70% tracked,	CPU Time =     593 seconds	(10:11 PM - 04/15/09).
+  80% tracked,	CPU Time =     678 seconds	(10:12 PM - 04/15/09).
+  90% tracked,	CPU Time =     763 seconds	(10:13 PM - 04/15/09).
+ 100% tracked,	CPU Time =     848 seconds	(10:15 PM - 04/15/09).
+
+***************** Simulation Finished *************
+
+
+
+Tracked 150000000 photons.
+
+Real time for calculating time bin decays = 0.1 seconds.
+Real time for tracking photons = 8476430.0 seconds.
+Total CPU time for calculating time bin decays = 0.1 seconds.
+Total CPU time for tracking photons  = 8476430.0. seconds
+
+CPU time for simulation =  8476430.1.
+Execution of PHG finished on 04 15 2009 (10:15:19 PM)
+
+
+
+***************** Collimated Photon Statistics *************
+
+Total blue photons reaching collimator in coincidence = 35870745.
+Total pink photons reaching collimator in coincidence = 35870745.
+
+Total blue photons passing collimator = 12208657.
+Total pink photons passing collimator = 4734990.
+
+Total blue photon weight reaching collimator = 1.8876e+08.
+Total pink photon weight reaching collimator = 6.4245e+07.
+Total coincidence weight reaching collimator = 6.4245e+07.
+
+Total blue photon weight passing collimator = 6.4245e+07.
+Total pink photon weight passing collimator = 2.4917e+07.
+Total coincidence weight passing collimator = 2.4917e+07.
+
+Total blue photon weight rejected by collimator = 1.2452e+08.
+Total pink photon weight rejected by collimator = 3.9328e+07.
+
+****************************************************************
+
+
+***************** Detected Photon Statistics *************
+
+Total blue photons entering detector module = 12208657.
+Total pink photons entering detector module = 4734990.
+
+Total blue photons accepted by detector = 10380521.
+Total pink photons accepted by detector = 3408162.
+Total photons depositing energy in detector = 13788683.
+Total photons absorbed in detector = 12383044.
+Total weight absorbed in detector = 6.52e+07.
+Total photons forced to absorb in detector = 0.
+Total weight forced to absorb in detector = 0.00e+00.
+Total first interaction absorptions = 6418204.
+Total weight of first interaction absorptions = 3.38e+07.
+Total photons passing through crystal without interacting = 2232059.
+Total interactions = 23545226
+Total coherent interactions = 1483417
+Weight decremented for FI = 0.00e+00
+	
+
+****************************************************************
+
+
+***************** Processing Binning Data *************
+
+Total blue photons reaching the binning module in this simulation = 10380521
+Total pink photons reaching the binning module in this simulation = 3408162
+
+Total coincidences reaching the binning module in this simulation = 3408162
+Total accepted blue photons in this simulation = 1952786
+Total accepted pink photons in this simulation = 1102341
+Total accepted coincidences in this simulation = 1088362
+Sum of accepted coincidence weights in this simulation = 5.727203e+06
+Sum of accepted coincidence squared weights in this simulation = 3.013781e+07
+Quality factor in image data = 1.00e+00
+
+Writing count image.
+Writing weight image.
+	Converting weight file to single precision, this may take a while.
+Writing weight squared image.
+	Converting weight squared file to single precision, this may take a while.
+
+***************** Finished Processing Binning Data *************

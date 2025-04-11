@@ -1,0 +1,24 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	randPET
+#       CREATED:	Dec 2008
+#       OWNER:		SimSET
+#
+#	This file gives parameters for a the time-sorting of
+#	a history file.
+#	It is intended for use with the fastTest simulation
+#	randPET base simulation.
+#
+##############################################################################
+
+# INPUT HISTORY FILE
+STR history_file = "randPET.base.dethist"
+ 
+# SORTED (OUTPUT) HISTORY FILE
+STR sorted_history_file = "randPET.base.dethist.srtd"
+ 
+# BUFFER MEMORY SIZE (IN MEGABYTES)
+INT buffer_size = 200
+ 

@@ -1,0 +1,123 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest TOFPET
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the binning parameters file of the baseline TOFPET simulation
+#	for the fastTest suite.
+#
+##############################################################################
+
+#
+# Trues/Scatter/Randoms binning options
+############################
+#
+# The user chooses whether to accept random events (for PET), the minimum
+# and maximum number of scatters to accept, and a scatter_random_param 
+# that specifies how to histogram the primaries, scatter and randoms.
+# 
+# The scatter_random_param can take on values 0 to 10. The most commonly
+# used values are scatter_random_param = 0, which bins all trues,
+# scatters, and randoms together; scatter_random_param = 1, which bins
+# trues and scatter separately (for PET and event is considered a
+# scattered event if either of the coincident photons are scattered,
+# whether it is a prompt or random event); and scatter_random_param = 6,
+# available for PET only, which bins trues, scatters, and randoms 
+# separately.
+#
+# To see a detailed description of all the choices for the
+# scatter_random_param, visit the Binning Module page of the User Guide
+# on the SimSET web pages.
+#
+BOOL    accept_randoms = false
+INT		scatter_random_param	=	0
+INT		min_s			=	0
+INT		max_s			=	100
+
+#
+# Energy binning in keV
+############################
+INT	num_e_bins		=	1
+REAL	min_e			=	400.0
+REAL	max_e			=	650.0
+
+#
+# Sinogram binning (distance-angle binning)
+############################
+
+# Z axis
+##############################
+INT		num_z_bins		=	12
+REAL	min_z			=	-6.0
+REAL	max_z			=	6.0
+BOOL	do_ssrb = true
+
+# Transaxial distance binning.
+# 	Bins the distance of the measured line-of-response from the tomograph axis.
+#
+INT	num_td_bins		=	10
+REAL	min_td			=	-10.0
+REAL	max_td			=	 10.0
+
+# Azimuthal angle bins
+#	Bins the angle the line-of-response makes with the x-axis.  For PET, these
+#	angles are between 0 and pi, for SPECT they are between 0 and 2pi.
+#
+INT	num_aa_bins		=	15
+
+#
+# Time-of-flight binning
+############################
+#
+# The maximum and minimum acceptable time-of-flight differences, 
+# max_tof and min_tof, are expressed in nanoseconds.
+
+INT     num_tof_bins             =       6
+REAL    min_tof                  =      -2.0 
+REAL    max_tof                  =       2.0
+
+#
+# Output files specification
+############################
+
+# Specification of weight image data type
+# Weight weight_image_type = 2 for four byte reals
+# Weight weight_image_type = 3 for 8 byte reals
+INT		weight_image_type	= 2
+
+# Specification of count image data type
+# Weight weight_image_type = 0 for one byte integers
+# Weight weight_image_type = 1 for two byte integers
+# Weight weight_image_type = 2 for four byte integers
+INT		count_image_type	= 2
+
+# Flag to indicate whether or not to add to existing images
+BOOL	add_to_existing_img = false
+
+# Path to the binned values of photon weights
+STR		weight_image_path			= "../TOFPET.base.wt"
+
+# Path to the binned values of photon weights squared.
+STR		weight_squared_image_path	= "../TOFPET.base.wtsq"
+
+# Path to the binned values of absolute photons count
+STR		count_image_path			= "../TOFPET.base.ct"
+
+#
+# Run-time precision
+############################
+
+# When the following value is set to false (or omitted), the weight
+# and weight-squared values are summed in double precision (eight-byte)
+# even if single precision (four-byte) output is requested.  The output
+# will be more accurate if this variable is set to false, but SimSET
+# will require more memory.
+#  
+# We suggest this parameter is left false, however, for some simulations
+# SimSET's memory requirements may be so great as to require that it be
+# be set true.
+BOOL    sum_according_to_type   = false
+

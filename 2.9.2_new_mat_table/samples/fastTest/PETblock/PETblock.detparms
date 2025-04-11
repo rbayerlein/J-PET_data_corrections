@@ -1,0 +1,77 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest PETblock
+#       CREATED:	Nov 2008
+#       OWNER:		SimSET
+#
+#	This file gives parameters for PET block-based detectors.
+#	It is intended for use with the fastTest suite.
+#
+#	This parameter file uses the block detector module.
+#
+##############################################################################
+
+# GENERAL DETECTOR MODULE PARAMETERS
+	# DETECTOR TYPE
+	# detector_type can be simple_pet or simple_spect (these just apply Gaussian
+	# blurring to the energy with no tracking through the detector), or planar,
+	# dual-headed, cylindrical, or block (these are photon-tracking simulations)
+	ENUM detector_type = block
+
+	# FORCED INTERACTION
+	# Photons can be forced to interact at least once in the detector array.  This
+	# is an importance sampling feature.  It often slows down block detector simulations.
+	BOOL do_forced_interaction = false
+
+	# ENERGY RESOLUTION
+	# Energy resolution is specified as a % full-width-half-maximum of a
+	# reference energy.
+	REAL    reference_energy_keV = 511.0
+	REAL    energy_resolution_percentage = 20
+
+	# HISTORY FILE
+	# If a file pathname is given below, a list-mode (or history) file is created
+	# giving all the photon information needed to continue the simulation
+	# after the detector module.  Such a file is very big!
+	# STR	history_file = ""
+	# The file can be made somewhat smaller by reducing the number of
+	# parameters recorded per photon--however, the file can no longer be used
+	# as input to the binning module.
+	#STR history_params_file = ""
+
+# POSITIONING ALGORITHM:  WHERE TO PLACE THE DETECTED POSITION WITHIN BLOCK
+	# BLOCKTOMO_POSITION_ALGORITHM
+	# what algorithm should be used to convert the interactions within a
+	# block into a detected position?  The current default is
+	# = snap_centroid_to_crystal_center
+	# which takes uses the center of the crystal nearest to the
+	# energy-weighted centroid of the interactions in active areas
+	# of the block as the detected position.  The other option is
+	# = use_energy_weighted_centroid
+	# which will just use the energy-weighted centroid as the detected
+	# position - note the latter does not guarantee that the detected
+	# position will fall within an active area in the block!
+	ENUM blocktomo_position_algorithm = snap_centroid_to_crystal_center
+
+# DEFINITION OF RING POSITIONS
+# Rings are stacked axially.  The axial extent of one ring cannot
+# overlap that of another.  (If such an arrangement of blocks is
+# desired, it can be achieved in a single ring.)
+NUM_ELEMENTS_IN_LIST blocktomo_num_rings = 1
+
+	# PLACEMENT AND DEFINITION OF RING 0
+	# The rings must be listed by increasing axial position.
+	# A list of items must be given for each ring: the name of
+	# the ring parameters file that defines it; the axial shift
+	# (i.e., the axial position to shift the z=0 point of the slice
+	# to); and the transaxial rotation, a counterclockwise
+	# rotation between 0 and 360 degrees.
+
+	# Ring 0
+	NUM_ELEMENTS_IN_LIST	blocktomo_ring_description_list = 3
+		STR		blocktomo_ring_parameter_file = "BGO.ringparms"
+		REAL	blocktomo_ring_axial_shift = 0
+		REAL	blocktomo_ring_transaxial_rotation =  0
+

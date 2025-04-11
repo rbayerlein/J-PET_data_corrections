@@ -1,0 +1,61 @@
+This directory contains parameter files and data for a SimSET simulation. The
+simulation can be run using the command runPETblock.sh, and the resulting data
+can be analyzed using analyzePETblock.sh.  These commands can also be run from
+the parent directory (along with similar commands in the sibling directories)
+using the commands runFast.sh and resultsFast.sh.
+
+The PETblock simulation uses a different object than the other fastTest
+simulations.  It is a 3cm radius, 3cm long water cylinder with point sources
+of equal intensity at (2,2,-1) and (0,0,1). This simulation does not use 
+importance sampling in the object, models positron range and non-collinearity, 
+and models coherent scatter in the tomograph, but not in the object.  
+(See PETblock.phgin.)
+
+No collimator is simulated, though the block detector module can be used
+in conjunction with a collimator;  a collimator could be
+simulated by uncommenting the line in PETblock.phgin giving the name of the 
+collimator parameter file (lines beginning with '#' are comments).
+
+The tomograph consists of a single ring of blocks;  Gaussian energy blurring
+of 20% (at a reference energy of 511 keV) is applied (PETblock.detparms).
+The ring consists of 8 blocks, all of the same type, placed at 0, 45, ...,
+315 degrees (BGO.ringparms).  Each block consists of a 3x3 array of LSO
+crystals, 9mmX9mmX25mm each, separated by 1mm of plastic.  The assembley
+is housed, front and sides, in 1mm thick aluminum, and at the back with
+1mm of plastic (BGO.blocparms).
+
+Please note that the tomograph defined in this example quite different from
+any tomograph we are aware of, and any results derived from simulations using
+these files should not be interpreted as giving any information about
+actual tomographs.  The tomograph is specified as it is in order to make
+the parameter files simple to understand and to keep the 'fast' in fastTest!
+
+All true and scatter coincidences for which both photons have a detected energy
+between 375 and 650 keV are binned by crystal pair (PETblock.binparms).  Randoms
+are not modeled.  
+
+runPETblock.sh runs the simulation.  
+
+The script analyzePETblock.sh compares the results from the simulation with
+results run on our computers.  The comparisons are made using
+the SimSET utility 'ttest', which performs a t-test on the data bin-by-bin.
+analyzePETblock.sh gives a summary of ttest's output for each simulation, e.g.:
+
+Minimum T-Test value = -3.004
+Maximum T-Test value = 2.314
+
+0.0 <= |T-Test| <= 1.0  	= 198 => %65.56
+0.0 <= |T-Test| <= 2.0  	= 291 => %96.36
+0.0 <= |T-Test| <= 3.0  	= 301 => %99.67
+0.0 <= |T-Test| <= 3.00 	= 302, => %100.00
+
+
+The absolute value of the ttest should be less than 1 approximately 67% of
+the time, less than 2 approximately 95% of the time, and less than 3 over
+99% of the time.  The maximum absolute value of the
+ttest should be between 2.0 and 4.5.  The random nature of the data may lead
+to a higher value on occasion, but the higher value should disappear if
+the simulation and analysis are rerun.
+
+If SimSET fails these conditions, further testing may be necessary.  Please
+contact us at simset@u.washington.edu.

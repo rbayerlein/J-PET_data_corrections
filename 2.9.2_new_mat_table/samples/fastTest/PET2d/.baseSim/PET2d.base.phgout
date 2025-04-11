@@ -1,0 +1,214 @@
+
+
+
+Command line: ../../../../../2.6.2.6/bin/phg PET2d.base.phgin 
+
+Execution of phg occurred on 04 15 2009 (07:11:08 PM)
+Simulating PET.
+Stratification is off.
+Forced Detection is off.
+Forced non-absorption is off.
+Modelling positron range is on.
+	Isotope being modelled is c11
+Modelling non-collinearity is on.
+Modelling coherent scatter in object is off.
+Modelling coherent scatter in tomograph is on.
+Modelling polarization is off.
+Photon energy is            511.0 keV.
+Minimum energy threshold is 100.0
+Acceptance angle is (+/-) 90.0 degrees.
+Sine of acceptance angle is 1.000.
+Number of decays to simulate = 75000000.
+Decay time = 60 seconds.
+Collimator modelling is on.
+Detector modelling is on.
+Binning is on.
+Creation of target-cylinder history file is off.
+Debug options = 0.
+Voxel as point source is on.
+Voxel as line source is off.
+Random seed is 785292142  (from system clock).
+
+ Collimator Parameters for '../PET2d.colparms'
+
+	Collimator is a Monte Carlo PET model
+		The number of layers is 1
+			For layer 0
+				Segment type is parallel
+				Max Z = -5.95 cm Min Z -6.00
+				Inner Radius = 10.00 cm Outer Radius 16.00
+				Material is aluminum
+				Segment type is parallel
+				Max Z = -2.05 cm Min Z -5.95
+				Inner Radius = 10.00 cm Outer Radius 16.00
+				Material is air
+				Segment type is parallel
+				Max Z = -1.95 cm Min Z -2.05
+				Inner Radius = 10.00 cm Outer Radius 16.00
+				Material is aluminum
+				Segment type is parallel
+				Max Z = 1.95 cm Min Z -1.95
+				Inner Radius = 10.00 cm Outer Radius 16.00
+				Material is air
+				Segment type is parallel
+				Max Z = 2.05 cm Min Z 1.95
+				Inner Radius = 10.00 cm Outer Radius 16.00
+				Material is aluminum
+				Segment type is parallel
+				Max Z = 5.95 cm Min Z 2.05
+				Inner Radius = 10.00 cm Outer Radius 16.00
+				Material is air
+				Segment type is parallel
+				Max Z = 6.00 cm Min Z 5.95
+				Inner Radius = 10.00 cm Outer Radius 16.00
+				Material is aluminum
+
+ Detector Parameters for 'PET2d.base.detparms'
+
+	Detector type is cylindrical
+	Forced interaction is off
+	Number of rings in detector is 1
+	Inner radius of detector is 16.000
+	Outer radius of detector is 19.000
+	Axial length of detector is 12.000
+	Ring 0 - 
+		layer 0 -
+			detector material index 18 = 'LSO'
+			inner radius = 16.00
+			outer radius = 19.00
+			minimum z = -6.00
+			maximum z = 6.00
+			status = active
+		layer 1 -
+			detector material index 0 = 'air'
+			inner radius = 0.00
+			outer radius = 0.00
+			minimum z = -6.00
+			maximum z = 6.00
+			status = not active
+	Detector energy is being blurred by a  Gaussian
+	Energy resolution = 15.0%
+	Reference energy = 511.0
+	Detector is being modelled with perfect time-of-flight resolution
+
+ Binning Parameters for PET2d.base.binparms
+
+	 Binning parameters are ordered by:
+	 slowest varying to fastest (top of this list to bottom).
+
+	  There are two scatter bins,
+	    the first contains primary (unscattered photons),
+	    the second contains photon's whose scatter count
+	    falls in the range [0, 100]
+	  Number of Z axis (1) bins = 2, range [-4.00, 4.00] (cm)
+	  Number of Z axis (2) bins = 2, range [-4.00, 4.00] (cm)
+	  Number of energy (1) bins = 2, range = [300.00, 650.00] (keV)
+	  Number of energy (2) bins = 2, range = [300.00, 650.00] (keV)
+	  Number of transaxial dist. bins = 10, range = [-10.00, 10.00] (cm)
+	  Number of azimuthal angle bins = 15, range = [0.00, 3.14] (radians)
+
+	  Add to existing images is false.
+
+	  Weight data is being summed in double precision
+	  Weight image format is four byte reals.
+	  Weight image file name is '../PET2d.base.wt'
+
+	  Weight squared image format is four byte reals.
+	  Weight squared image file name is '../PET2d.base.wtsq'
+
+	  Count image format is four byte integers.
+	  Count image file name is '../PET2d.base.ct'
+
+***************** Simulation Beginning *************
+  10% tracked,	CPU Time = 187 seconds	(07:14 PM - 04/15/09).
+  20% tracked,	CPU Time = 373 seconds	(07:17 PM - 04/15/09).
+  30% tracked,	CPU Time = 560 seconds	(07:20 PM - 04/15/09).
+  40% tracked,	CPU Time = 747 seconds	(07:23 PM - 04/15/09).
+  50% tracked,	CPU Time = 934 seconds	(07:27 PM - 04/15/09).
+  60% tracked,	CPU Time = 1121 seconds	(07:30 PM - 04/15/09).
+  70% tracked,	CPU Time = 1307 seconds	(07:33 PM - 04/15/09).
+  80% tracked,	CPU Time = 1494 seconds	(07:36 PM - 04/15/09).
+  90% tracked,	CPU Time = 1680 seconds	(07:39 PM - 04/15/09).
+ 100% tracked,	CPU Time = 1867 seconds	(07:42 PM - 04/15/09).
+
+***************** Simulation Finished *************
+
+
+
+Tracked 150000000 photons.
+
+Real time for calculating time bin decays = 0.7 seconds.
+Real time for tracking photons = 18665089.5 seconds.
+Total CPU time for calculating time bin decays = 0.7 seconds.
+Total CPU time for tracking photons  = 18665089.5. seconds
+
+CPU time for simulation =  18665090.2.
+Execution of PHG finished on 04 15 2009 (07:42:53 PM)
+
+
+
+***************** Collimated Photon Statistics *************
+
+Total blue photons reaching collimator in coincidence = 35867175.
+Total pink photons reaching collimator in coincidence = 35867175.
+
+Total blue photons passing collimator = 18283536.
+Total pink photons passing collimator = 18287244.
+
+Total blue photon weight reaching collimator = 1.8874e+08.
+Total pink photon weight reaching collimator = 1.8874e+08.
+Total coincidence weight reaching collimator = 1.8874e+08.
+
+Total blue photon weight passing collimator = 9.6212e+07.
+Total pink photon weight passing collimator = 9.6232e+07.
+Total coincidence weight passing collimator = 9.6232e+07.
+
+Total blue photon weight rejected by collimator = 9.2529e+07.
+Total pink photon weight rejected by collimator = 9.2510e+07.
+
+****************************************************************
+
+
+***************** Detected Photon Statistics *************
+
+Total blue photons entering detector module = 18283536.
+Total pink photons entering detector module = 18287244.
+
+Total blue photons accepted by detector = 16887745.
+Total pink photons accepted by detector = 16893532.
+Total photons depositing energy in detector = 33781277.
+Total photons absorbed in detector = 31661961.
+Total weight absorbed in detector = 1.67e+08.
+Total photons forced to absorb in detector = 0.
+Total weight forced to absorb in detector = 0.00e+00.
+Total first interaction absorptions = 16862862.
+Total weight of first interaction absorptions = 8.87e+07.
+Total photons passing through crystal without interacting = 2510847.
+Total interactions = 57814554
+Total coherent interactions = 0
+Weight decremented for FI = 0.00e+00
+	
+
+****************************************************************
+
+
+***************** Processing Binning Data *************
+
+Total blue photons reaching the binning module in this simulation = 16887745
+Total pink photons reaching the binning module in this simulation = 16893532
+
+Total coincidences reaching the binning module in this simulation = 8523278
+Total accepted blue photons in this simulation = 3851476
+Total accepted pink photons in this simulation = 1717171
+Total accepted coincidences in this simulation = 1578384
+Sum of accepted coincidence weights in this simulation = 8.305807e+06
+Sum of accepted coincidence squared weights in this simulation = 4.370700e+07
+Quality factor in image data = 1.00e+00
+
+Writing count image.
+Writing weight image.
+	Converting weight file to single precision, this may take a while.
+Writing weight squared image.
+	Converting weight squared file to single precision, this may take a while.
+
+***************** Finished Processing Binning Data *************

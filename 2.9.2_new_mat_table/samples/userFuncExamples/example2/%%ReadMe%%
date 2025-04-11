@@ -1,0 +1,23 @@
+This directory gives an example of a user function that changes
+the handling of triple coincidences with SimSET's user functions.
+
+Before working in this directory, we suggest going up one
+directory (to samples/userFuncExamples) and setting the
+endianess of your computer.  To do so, run useLittleend.sh
+or useBigend.sh (most computers are littleendian these days).
+
+After returning to this directory, go into the make.files
+sub-directory and edit simset.make:
+- change SIMSET_PATH to the same path you use for your regular
+SimSET builds.
+- change SIMSET_PATH_USR to the path for this example directory
+(i.e., the path should end in 'samples/userFuncExamples/example2).
+
+Return to the example1 directory and run the script ./make_all.sh.
+
+If everything compiled and linked, you should be ready to go.
+
+To run this example, run the script ./rrunPETblockrand.sh.
+The example is described in detail in the user function
+section of SimSET's user guide,
+http://depts.washington.edu/simset/html/user_guide/user_guide_index.html.

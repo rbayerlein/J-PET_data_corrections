@@ -1,0 +1,56 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	randPET
+#       CREATED:	Dec 2008
+#       OWNER:		SimSET
+#
+#	This file gives parameters for a 3d PET detector.
+#	It is intended for use with the fastTest simulation
+#	randPET base simulation.
+#
+#	This parameter file uses the "Monte-Carlo" cylindrical detector.
+#	It consists of 3 cm of BGO.
+#
+##############################################################################
+
+#	detector_type can be simple_pet or simple_spect (these just apply Gaussian
+#	blurring to the energy with no tracking through the detector), or planar,
+#	dual-headed, or cylindrical (these are photon-tracking simulations)
+ENUM detector_type = cylindrical
+
+#	photons can be forced to interact at least once in the detector.
+BOOL do_forced_interaction = false
+
+#	Our detector will consist of one axial ring of BGO
+#	at a radius of 30 cm.  
+INT		cyln_num_rings = 1
+
+#	A list items must be given for a ring:  the number of radial
+#	layers, the axial beginning and end of the ring, and a list of
+#	parameters for each layer. Here we have just one layer.
+NUM_ELEMENTS_IN_LIST	cyln_ring_info_list = 4
+	INT		cyln_num_layers = 1	
+	REAL	cyln_min_z = -10.0
+	REAL	cyln_max_z =  10.0
+#	A list of 4 items must be given for each layer of the detector:
+	NUM_ELEMENTS_IN_LIST	cyln_layer_info_list = 4
+		BOOL	cyln_layer_is_active = TRUE
+		INT		cyln_layer_material = 10
+		REAL	cyln_layer_inner_radius = 30.0
+		REAL	cyln_layer_outer_radius = 33.0
+
+# 	We specify an energy resolution as a % full-width-half-maximum at the
+#	emitted energy of the photon.
+#	Here, we simulate perfect energy resolution - these lines are commented.
+# REAL    reference_energy_keV = 511.0
+# REAL    energy_resolution_percentage = 15
+
+#	A detector history file is specified for the output from the detector.
+STR	history_file = "randPET.base.dethist"
+
+#	The file can be made somewhat smaller by reducing the number of
+#	parameters recorded per photon--however, the file can no longer be used
+#	as input to the binning module.
+# STR history_params_file = ""

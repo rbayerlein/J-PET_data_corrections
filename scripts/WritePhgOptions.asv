@@ -1,0 +1,31 @@
+function WritePhgOptions(fid,num_to_simulate,x_rng)
+%WRITEPHGOPTIONS Summary of this function goes here
+%   Detailed explanation goes here
+
+if nargin ~= 3
+    error('Usage: WritePhgOptions(fid,num_to_simulate,x_rng)');
+end
+
+fprintf(fid,'%s\n','# RUNTIME OPTIONS');
+fprintf(fid,'%s%d\n','LONGLONG num_to_simulate = ',ceil(num_to_simulate));
+fprintf(fid,'%s\n','BOOL simulate_SPECT = false');
+fprintf(fid,'%s\n','BOOL simulate_PET_coincidences_only = true');
+fprintf(fid,'%s\n','BOOL simulate_PET_coincidences_plus_singles = false');
+fprintf(fid,'%s\n','REAL photon_energy = 511');
+fprintf(fid,'%s\n','REAL minimum_energy = 350');
+fprintf(fid,'%s\n','BOOL model_coherent_scatter_in_obj = true');
+fprintf(fid,'%s\n','BOOL model_coherent_scatter_in_tomo = false');
+fprintf(fid,'%s\n','BOOL adjust_for_collinearity = true');
+fprintf(fid,'%s\n','BOOL adjust_for_positron_range = true');
+fprintf(fid,'%s\n','ENUM isotope = f18');
+fprintf(fid,'%s %d\n','INT random_seed =',x_rng);
+fprintf(fid,'\n');
+fprintf(fid,'%s\n','# SAMPLING OPTIONS');
+fprintf(fid,'%s\n','BOOL simulate_stratification = false');
+fprintf(fid,'%s\n','BOOL simulate_forced_detection = false');
+fprintf(fid,'%s\n','BOOL forced_non_absorption = false');
+fprintf(fid,'%s\n','REAL weight_window_ratio = 1.0');
+fprintf(fid,'\n');
+
+end
+

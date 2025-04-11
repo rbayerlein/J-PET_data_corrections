@@ -1,0 +1,111 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest PET3d
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the binning parameters file for the baseline simulation
+#	for PET3d in the fastTest suite.
+#
+##############################################################################
+
+#
+# Trues/Scatter binning options
+############################
+#
+INT		scatter_param	=	1
+INT		min_s			=	0
+INT		max_s			=	100
+
+# Z axis
+##############################
+INT		num_z_bins		=	1
+REAL	min_z			=	-6.0
+REAL	max_z			=	6.0
+
+#
+# Energy binning in keV
+############################
+#
+#	For this simulation, we use only one energy bin.  Using one bin will
+#	cause the energy range given by min_e and max_e to be applied.  If we
+#	set the number of energy bins to 0, the energy range would be ignored.
+INT	num_e1_bins		=	1
+INT	num_e2_bins		=	1
+REAL	min_e			=	200.0
+REAL	max_e			=	650.0
+
+#
+# 3D-RP binning parameters 
+############################
+# 3DRP 'phi'
+#	Range = [0, pi]
+INT		num_phi_bins = 12
+
+# 3DRP 'theta'
+#	min_theta always = -max_theta
+#	Specify in degrees
+INT		num_theta_bins = 3
+REAL	max_theta = 18.0
+
+# 3DRP 'Xr'
+INT		num_xr_bins = 8
+REAL	min_xr = -10.0
+REAL	max_xr = 10.0
+
+# 3DRP 'Yr'
+INT		num_yr_bins = 5
+REAL	min_yr = -6.0
+REAL	max_yr = 6.0
+
+# MSRB or SSRB?
+BOOL do_msrb = false
+BOOL do_ssrb = false
+
+# Detector radius
+#	Typically the inner radius of the detector 
+REAL	detector_radius = 0.0
+
+#
+# Output files specification
+############################
+
+# Specification of weight image data type
+# Weight weight_image_type = 2 for four byte reals
+# Weight weight_image_type = 3 for 8 byte reals
+INT		weight_image_type	= 2
+
+# Specification of count image data type
+# Weight weight_image_type = 0 for one byte integers
+# Weight weight_image_type = 1 for two byte integers
+# Weight weight_image_type = 2 for four byte integers
+INT		count_image_type	= 2
+
+# Flag to indicate whether or not to add to existing images
+BOOL	add_to_existing_img = false
+
+# Path to the binned values of photon weights
+STR		weight_image_path			= "../PET3d.base.wt"
+
+# Path to the binned values of photon weights squared.
+STR		weight_squared_image_path	= "../PET3d.base.wtsq"
+
+# Path to the binned values of absolute photons count
+STR		count_image_path			= "../PET3d.base.ct"
+
+#
+# Run-time precision
+############################
+
+# When the following value is set to false (or omitted), the weight
+# and weight-squared values are summed in double precision (eight-byte)
+# even if single precision (four-byte) output is requested.  The output
+# will be more accurate if this variable is set to false, but SimSET
+# will require more memory.
+#  
+# We suggest this parameter is left false, however, for some simulations
+# SimSET's memory requirements may be so great as to require that it be
+# be set true.
+BOOL    sum_according_to_type   = false

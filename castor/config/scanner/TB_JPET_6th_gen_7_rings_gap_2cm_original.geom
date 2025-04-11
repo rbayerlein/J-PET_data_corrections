@@ -1,0 +1,54 @@
+# comments
+#       Y                                        _________  
+#       |                                       / _ \     \ 
+#       |                                      | / \ |     |
+#       |_____ Z                               | | | |     |
+#        \                                     | | | |     |
+#         \                                    | \_/ |     |
+#          X                                    \___/_____/
+# Left-handed axis orientation
+# scanner axis is z
+# positions in millimeters
+# Use comma without space as separator in the tables.
+
+# MANDATORY FIELDS
+modality : PET
+scanner name : TB_JPET_6th_gen_7_rings_gap_2cm
+number of elements              : 599760
+number of layers : 3
+
+voxels number transaxial        : 8
+voxels number axial                : 14
+field of view transaxial        : 595.465
+field of view axial                : 2430
+
+description        : PET system extracted from GATE macro: TB_JPET_6th_gen_7_rings_gap_2cm.mac
+
+scanner radius : 414.799,448.399,445.099
+number of rsectors              : 24,24,24
+number of crystals transaxial    : 16,16,1
+number of crystals axial            : 770,770,350
+
+crystals size depth                : 30,30,3
+crystals size transaxial          : 6,6,108.15
+crystals size axial                 : 3,3,6
+
+
+# OPTIONAL FIELDS
+rsectors first angle              : -90,-90,-90
+number of rsectors axial            : 1,1,1
+rsector gap transaxial                : 0
+rsector gap axial                        : 0,0,0
+number of modules transaxial    : 1,1,1
+number of modules axial            : 1,1,1
+module gap transaxial                : 0,0,0
+module gap axial                        : 0,0,0
+number of submodules transaxial    : 1,1,1
+number of submodules axial            : 1,1,1
+submodule gap transaxial                : 0,0,0
+submodule gap axial                        : 0,0,0
+crystal gap transaxial                : 0.6,0.6,0.6
+crystal gap axial                        : 0,0,0.4
+mean depth of interaction       :  -1,-1,-1
+rotation direction       : CCW 
+

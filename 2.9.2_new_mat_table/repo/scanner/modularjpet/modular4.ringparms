@@ -1,0 +1,216 @@
+##########################################
+#
+#  Ring parameter file: modular4.ringparms
+#  Author/Owner:        Manish Das
+#  Comments:            J-PET
+#                       
+#
+##########################################
+
+# RING OUTER DIMENSIONS
+# Provides the outer dimensions of the ring: all the blocks must fall entirely
+# within these boundaries.  The ring is bounded with a maximum and minimum
+# z value axially and by elliptical cylinders transaxially.  These bounds are not
+# in tomograph coordinates: the ring can shifted up or down axially or rotated
+# transaxially when placing it in the tomograph.
+REAL	ring_x_inner_radius     =   36.98600000000000
+REAL	ring_x_outer_radius     =   40.38600000000000
+REAL	ring_y_inner_radius     =   36.98600000000000
+REAL	ring_y_outer_radius     =   40.38600000000000
+REAL	ring_z_minimum          =   -25.00000000000000
+REAL	ring_z_maximum          =   25.00000000000000
+
+NUM_ELEMENTS_IN_LIST   ring_num_blocks_in_ring  = 24
+
+# Block    0
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 0.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    1
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 15.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    2
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 30.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    3
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 45.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    4
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 60.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    5
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 75.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    6
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 90.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    7
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 105.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    8
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 120.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    9
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 135.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    10
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 150.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    11
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 165.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    12
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 180.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    13
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 195.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    14
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 210.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    15
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 225.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    16
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 240.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    17
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 255.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    18
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 270.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    19
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 285.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    20
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 300.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    21
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 315.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    22
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 330.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    23
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.blocparms"
+REAL     ring_block_radial_position                 = 36.98600000000000
+REAL     ring_block_angular_position                = 345.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+

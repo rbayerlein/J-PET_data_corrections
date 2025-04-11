@@ -1,0 +1,163 @@
+
+
+
+Command line: ../../../../../2.6.2.6/bin/phg SPECT.base.phgin 
+
+Execution of phg occurred on 04 15 2009 (11:28:39 PM)
+Simulating SPECT.
+Stratification is off.
+Forced Detection is off.
+Forced non-absorption is off.
+Modelling positron range is off.
+Modelling non-collinearity is off.
+Modelling coherent scatter in object is on.
+Modelling coherent scatter in tomograph is on.
+Modelling polarization is off.
+Photon energy is            140.0 keV.
+Minimum energy threshold is 100.0
+Acceptance angle is (+/-) 14.1 degrees.
+Sine of acceptance angle is 0.244.
+Number of decays to simulate = 12000000.
+Decay time = 60 seconds.
+Collimator modelling is on.
+Detector modelling is on.
+Binning is on.
+Creation of target-cylinder history file is off.
+Debug options = 0.
+Voxel as point source is on.
+Voxel as line source is off.
+Random seed is 422787759  (from system clock).
+
+ Collimator Parameters for '../SPECT.colparms'
+
+	Hole geometry = parallel
+	Radius of rotation = 	10.00
+	Collimator thickness = 	2.00
+	Hole radius = 	2.500e-01
+	Septal thickness = 	1.000e-02
+	Min Z = 	-6.00
+	Max Z = 	6.00
+	Start angle = 	0.00
+	Stop angle = 	6.28
+	Number of views = 	25
+	Acceptance Angle = 	2.450e-01 radians
+
+ Detector Parameters for 'SPECT.base.detparms'
+
+	Detector type is planar
+	Forced interaction is off
+	Number of layers in detector is 2
+	Layer 0 is 'aluminum', depth = 0.100, status = not active
+	Layer 1 is 'NaI', depth = 2.500, status = active
+	Inner radius of detector is 12.000
+	Transaxial length of detector is 40.000
+	Axial length of detector is 12.000
+	Radial depth of detector is 2.600
+	Number of detector views = 25
+	Minimum detector angle = 0.00 radians
+	Maximum detector angle = 6.28 radians
+	Detector is being modelled with perfect energy resolution
+
+ Binning Parameters for SPECT.base.binparms
+
+	 Binning parameters are ordered by:
+	 slowest varying to fastest (top of this list to bottom).
+
+	  There are two scatter bins,
+	    the first contains primary (unscattered photons),
+	    the second contains photon's whose scatter count
+	    falls in the range [0, 100]
+	  Number of Z axis bins = 10, range [-6.00, 6.00] (cm)
+	  Number of energy bins = 1, range = [110.00, 160.00] (keV)
+	  Number of transaxial dist. bins = 15, range = [-10.00, 10.00] (cm)
+	  Number of azimuthal angle bins = 25, range = [0.00, 6.28] (radians)
+
+	  Add to existing images is false.
+
+	  Weight data is being summed in double precision
+	  Weight image format is four byte reals.
+	  Weight image file name is '../SPECT.base.wt'
+
+	  Weight squared image format is four byte reals.
+	  Weight squared image file name is '../SPECT.base.wtsq'
+
+	  Count image format is four byte integers.
+	  Count image file name is '../SPECT.base.ct'
+
+***************** Simulation Beginning *************
+  10% tracked,	CPU Time =  17 seconds	(11:28 PM - 04/15/09).
+  20% tracked,	CPU Time =  35 seconds	(11:29 PM - 04/15/09).
+  30% tracked,	CPU Time =  52 seconds	(11:29 PM - 04/15/09).
+  40% tracked,	CPU Time =  69 seconds	(11:29 PM - 04/15/09).
+  50% tracked,	CPU Time =  87 seconds	(11:30 PM - 04/15/09).
+  60% tracked,	CPU Time = 104 seconds	(11:30 PM - 04/15/09).
+  70% tracked,	CPU Time = 121 seconds	(11:30 PM - 04/15/09).
+  80% tracked,	CPU Time = 139 seconds	(11:31 PM - 04/15/09).
+  90% tracked,	CPU Time = 156 seconds	(11:31 PM - 04/15/09).
+ 100% tracked,	CPU Time = 174 seconds	(11:31 PM - 04/15/09).
+
+***************** Simulation Finished *************
+
+
+
+Tracked 12000000 photons.
+
+Real time for calculating time bin decays = 1.0 seconds.
+Real time for tracking photons = 1735324.6 seconds.
+Total CPU time for calculating time bin decays = 1.0 seconds.
+Total CPU time for tracking photons  = 1735324.6. seconds
+
+CPU time for simulation =  1735325.6.
+Execution of PHG finished on 04 15 2009 (11:31:36 PM)
+
+
+
+***************** Collimated Photon Statistics *************
+
+Total photons reaching collimator in  = 1527723.
+
+Total photons passing collimator = 1340964.
+
+Sum of accepted primary weight = 3.22e+05
+Sum of accepted scatter weight = 2.90e+05
+
+Scatter-to-primary ratio = 9.01e-01
+
+
+****************************************************************
+
+
+***************** Detected Photon Statistics *************
+
+Total photons entering detector module = 1340964.
+Total photons reaching the crystal = 1340964.
+Total photons depositing energy in detector = 1312934.
+Total photons absorbed in detector = 1302825.
+Total weight absorbed in detector = 5.95e+05
+Total photons forced to absorb in detector = 0.
+Total weight forced to absorb in detector = 0.00e+00
+Total first interaction absorptions = 1023874.
+Total weight of first interaction absorptions = 4.67e+05
+Total photons passing through crystal without interacting = 3345.
+Total photons reaching maximum number of interactions (15) = 0.
+Weight decremented for FI = 0.00e+00
+	
+
+****************************************************************
+
+
+***************** Processing Binning Data *************
+
+Total photons reaching the binning module in this simulation = 1312934
+Total accepted photons in this simulation = 1150780
+Sum of accepted weights in this simulation = 5.249945e+05
+Sum of accepted squared weights in this simulation = 3.496573e+05
+Quality factor in image data = 6.85e-01
+
+Writing count image.
+Writing weight image.
+	Converting weight file to single precision, this may take a while.
+Writing weight squared image.
+	Converting weight squared file to single precision, this may take a while.
+
+***************** Finished Processing Binning Data *************

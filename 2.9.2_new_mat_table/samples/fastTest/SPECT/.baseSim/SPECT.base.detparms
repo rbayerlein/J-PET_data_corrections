@@ -1,0 +1,76 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest SPECT
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the detector parameters file for baseline simulation of
+#	SPECT in the fastTest suite.
+#
+##############################################################################
+
+
+# Specify type of detector - options are:
+#
+# simple_pet   - performs energy blur according to parameters
+# simple_spect - performs energy blur according to parameters
+# block        - multi-block detector for PET/PVI
+# planar       - single block detector for SPECT/Planar
+# cylindrical  - solid cylindrical detector for PET/PVI
+# dual_headed  - two planar blocks for dual headed coincidence imaging
+
+ENUM  detector_type            = planar
+
+# This example has two layers, an inactive (non-active) layer
+# and an active layer.  Interactions within inactive layers do not
+# contribute to centroid calculations
+
+INT  plnr_num_layers           = 2
+
+# Specify the inner radius of the detector block
+ 
+REAL plnr_inner_radius         = 12.0
+
+# Specify the transaxial length of the block
+
+REAL plnr_transaxial_length    = 40
+
+# Specify the axial length of the block (Z-axis)
+
+REAL plnr_axial_length         = 12
+
+# Specify the number of views (ie the number of azimuthal angles)
+# For SPECT, if the number of azimuthal angles in the binning module is != 1
+# this value must match that value, if the number of azimuthal angles
+# in the binning module = 1, this number can be any value you like.
+
+INT  plnr_num_views            = 25
+
+# Specify layer specific information
+# The first layer is an aluminum shield/detector housing
+# The second is the active crystal
+
+LIST plnr_layer_info_list      = 3
+     REAL plnr_layer_depth     = 0.1 
+     INT  plnr_layer_material  = 20
+     BOOL plnr_layer_is_active = FALSE
+
+ 
+LIST plnr_layer_info_list      = 3
+     REAL plnr_layer_depth     = 2.5 
+     INT  plnr_layer_material  = 9
+     BOOL plnr_layer_is_active = TRUE
+
+#	the photon can be forced to interact at least once in the detector.
+BOOL do_forced_interaction = false
+
+# Specify the energy resolution of our detector (% of FWHM)
+# REAL    energy_resolution_percentage = 10
+
+# Specify our reference energy
+# REAL    reference_energy_keV = 140
+
+# Specify pathname of the history file (empty string = no history file)
+STR    history_file = ""

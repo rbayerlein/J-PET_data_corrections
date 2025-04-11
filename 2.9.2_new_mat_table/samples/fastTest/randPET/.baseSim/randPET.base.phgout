@@ -1,0 +1,130 @@
+
+
+
+Command line: ../../../../../2.9/bin/phg randPET.base.phgin 
+
+Execution of phg occurred on 04 15 2009 (10:15:20 PM)
+Simulating PET (coincidences plus singles).
+Stratification is off.
+Forced Detection is off.
+Forced non-absorption is off.
+Modelling positron range is off.
+Modelling non-collinearity is off.
+Modelling coherent scatter in object is on.
+Modelling coherent scatter in tomograph is on.
+Modelling polarization is off.
+Photon energy is            511.0 keV.
+Minimum energy threshold is 350.0
+Acceptance angle is (+/-) 90.0 degrees.
+Sine of acceptance angle is 1.000.
+Decays to simulate (calculated from activity and scan time) = 131555555.
+Scan time =     1.000 seconds.
+Collimator modelling is on.
+Detector modelling is on.
+Binning is off.
+Creation of target-cylinder history file is off.
+Debug options = 0.
+Voxel as point source is on.
+Voxel as line source is off.
+Random seed is 1239858919  (from system clock).
+
+ Collimator Parameters for '../randPET.colparms'
+
+	Collimator is a Monte Carlo PET model
+		The number of layers is 1
+			For layer 0
+				Segment type is parallel
+				Max Z = 10.00 cm Min Z -10.00
+				Inner Radius = 29.00 cm Outer Radius 30.00
+				Material is air
+
+ Detector Parameters for 'randPET.base.detparms'
+
+	Detector type is cylindrical
+	Forced interaction is off
+	Number of rings in detector is 1
+	Inner radius of detector is 30.000
+	Outer radius of detector is 33.000
+	Axial length of detector is 20.000
+	Ring 0 - 
+		layer 0 -
+			detector material index 10 = 'BGO'
+			inner radius = 30.00
+			outer radius = 33.00
+			minimum z = -10.00
+			maximum z = 10.00
+			status = active
+	Detector is being modelled with perfect energy resolution
+	Detector is being modelled with perfect time-of-flight resolution
+
+***************** Simulation Beginning *************
+  10% tracked,	CPU Time =      84 seconds	(10:16 PM - 04/15/09).
+  20% tracked,	CPU Time =     167 seconds	(10:18 PM - 04/15/09).
+  30% tracked,	CPU Time =     251 seconds	(10:19 PM - 04/15/09).
+  40% tracked,	CPU Time =     335 seconds	(10:21 PM - 04/15/09).
+  50% tracked,	CPU Time =     419 seconds	(10:22 PM - 04/15/09).
+  60% tracked,	CPU Time =     502 seconds	(10:24 PM - 04/15/09).
+  70% tracked,	CPU Time =     586 seconds	(10:25 PM - 04/15/09).
+  80% tracked,	CPU Time =     670 seconds	(10:27 PM - 04/15/09).
+  90% tracked,	CPU Time =     753 seconds	(10:28 PM - 04/15/09).
+ 100% tracked,	CPU Time =     837 seconds	(10:29 PM - 04/15/09).
+
+***************** Simulation Finished *************
+
+
+
+Tracked 263111110 photons.
+
+Real time for calculating time bin decays = 0.1 seconds.
+Real time for tracking photons = 8368618.7 seconds.
+Total CPU time for calculating time bin decays = 0.1 seconds.
+Total CPU time for tracking photons  = 8368618.7. seconds
+
+CPU time for simulation =  8368618.8.
+Execution of PHG finished on 04 15 2009 (10:29:58 PM)
+
+
+
+***************** Collimated Photon Statistics *************
+
+Total blue photons reaching collimator in coincidence = 16456199.
+Total pink photons reaching collimator in coincidence = 16458641.
+
+Total blue photons passing collimator = 16455070.
+Total pink photons passing collimator = 16457529.
+
+Total blue photon weight reaching collimator = 1.6456e+07.
+Total pink photon weight reaching collimator = 1.6459e+07.
+Total coincidence weight reaching collimator = 3.4129e+06.
+
+Total blue photon weight passing collimator = 1.6455e+07.
+Total pink photon weight passing collimator = 1.6458e+07.
+Total coincidence weight passing collimator = 3.4126e+06.
+
+Total blue photon weight rejected by collimator = 1.1290e+03.
+Total pink photon weight rejected by collimator = 1.1120e+03.
+
+****************************************************************
+
+
+***************** Detected Photon Statistics *************
+
+Total blue photons entering detector module = 16455070.
+Total pink photons entering detector module = 16457529.
+
+Total blue photons accepted by detector = 15566516.
+Total pink photons accepted by detector = 15569459.
+Total photons depositing energy in detector = 31135975.
+Total photons absorbed in detector = 29628234.
+Total weight absorbed in detector = 2.96e+07.
+Total photons forced to absorb in detector = 0.
+Total weight forced to absorb in detector = 0.00e+00.
+Total first interaction absorptions = 13679015.
+Total weight of first interaction absorptions = 1.37e+07.
+Total photons passing through crystal without interacting = 1498175.
+Total interactions = 56024087
+Total coherent interactions = 3441688
+Weight decremented for FI = 0.00e+00
+	
+
+****************************************************************

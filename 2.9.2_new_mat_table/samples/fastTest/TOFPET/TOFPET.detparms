@@ -1,0 +1,65 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest TOFPET
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#
+#	This file gives parameters for a TOFPET detector.
+#	It is intended for use with the fastTest suite.
+#
+#	This parameter file is setup to use the "Monte-Carlo" detector module.
+#
+##############################################################################
+
+#	detector_type can be simple_pet or simple_spect (these just apply Gaussian
+#	blurring to the energy with no tracking through the detector), or planar,
+#	dual-headed, or cylindrical (these are photon-tracking simulations)
+ENUM detector_type = cylindrical
+
+#	photons can be forced to interact at least once in the detector.  This
+#	is an importance sampling feature.
+BOOL do_forced_interaction = true
+
+#	Our detector consists of a single ring of LSO.
+INT		cyln_num_rings = 1
+
+#	A list items must be given for a ring:  the number of radial
+#	layers, the axial beginning and end of the ring, and a list of
+#	parameters for each layer.  Here we have just one layer
+NUM_ELEMENTS_IN_LIST	cyln_ring_info_list = 4
+	INT		cyln_num_layers = 1
+	REAL	cyln_min_z = -6.0
+	REAL	cyln_max_z =  6.0
+#	A list of 4 items must be given for each layer of the detector:
+	NUM_ELEMENTS_IN_LIST	cyln_layer_info_list = 4
+		BOOL	cyln_layer_is_active = TRUE
+		INT		cyln_layer_material = 18
+		REAL	cyln_layer_inner_radius = 16.0
+		REAL	cyln_layer_outer_radius = 18.0
+
+# 	We specify an energy resolution as a % full-width-half-maximum at the
+#	emitted energy of the photon.
+#	Here, we simulate 15% energy resolution.
+REAL    reference_energy_keV = 511.0
+REAL    energy_resolution_percentage = 15
+
+# 	We specify a time-of-flight resolution as a % full-width-half-maximum
+#	in nanoseconds.
+#	(note that this is a per photon time resolution: for coincidence time
+#	difference the TOF resolution will be the squareroot of twice the square
+#	of this quantity, i.e., the coincidence TOF resolution is approx.
+#	0.6 ns for the photon time resolution given below.)
+REAL	photon_time_fwhm_ns = 0.424
+
+#	If a file pathname is given below, a list-mode file will be created
+#	giving all the photon information needed to continue the simulation
+#	after the collimator module.  Such a file is very big!
+STR	history_file = ""
+
+#	The file can be made somewhat smaller by reducing the number of
+#	parameters recorded per photon--however, the file can no longer be used
+#	as input to the binning module.
+STR history_params_file = ""

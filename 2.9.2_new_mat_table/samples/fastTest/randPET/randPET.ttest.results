@@ -1,0 +1,51 @@
+Enter name of count file for simulation 'A': Enter name weight file for simulation 'A': Enter name of weight squared file for simulation 'A': Enter name of count file for simulation 'B': Enter name of weight file for simulation 'B': Enter name of weight squared file for simulation 'B': Enter size of header to skip [32768]: 
+Number of bins checked = 3375
+Number of valid bins in set 'A' = 1319
+Number of valid bins in set 'B' = 1322
+Number of valid pairs found = 1304
+Number of pairs with one valid and one too small = 33
+Number of pairs with both > 0 but < min = 520
+Number of pairs with both zero = 1518
+
+
+Do you want to continue (Yes..No) [Yes]: Num pairs with valid weights = 1304
+Minimum T-Test value = -3.762
+Maximum T-Test value = 3.514
+
+0.0 <= |T-Test| <= 1.0  	= 905 => %69.40
+0.0 <= |T-Test| <= 2.0  	= 1243 => %95.32
+0.0 <= |T-Test| <= 3.0  	= 1299 => %99.62
+0.0 <= |T-Test| <= 3.76 	= 1304, => %100.00
+
+Do you want to print T-Tests to stdout? (Yes..No) [Yes]: 
+Do you want to histogram the results? (Yes..No) [Yes]: Enter number of bins for histogram: Enter range minimum [-3.762]: Enter range maximum [3.514]: 
+Histogram of T-Test values over range [-5.00, 5.00]
+
+-5.00	0 (Less than minimum)
+-4.50	0
+-3.50	3
+-2.50	31
+-1.50	161
+-0.50	487
+0.50	418
+1.50	177
+2.50	25
+3.50	2
+4.50	0
+5.00	0 (Greater than maximum)
+
+Cumulative Histogram
+
+-5.00
+-3.50	3
+-2.50	34
+-1.50	195
+-0.50	682
+0.50	1100
+1.50	1277
+2.50	1302
+3.50	1304
+4.50	1304
+5.00
+
+Do you want to histogram the results again? (Yes..No) [Yes]: 

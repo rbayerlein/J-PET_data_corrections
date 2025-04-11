@@ -1,0 +1,93 @@
+#########################################################################
+# PARAMETER FILE FOR THE PHG BINNING MODULE
+#
+# RUN NAME: tutor1
+# CREATED: 3/10/94
+# OWNER: Joe SPECT
+#
+########################################################################
+#
+# BINNING OPTIONS
+# NOTE that only active parameters are shown here: unused parameters
+# are omitted.  See the bin_params sample file on the Histogram 
+# web page for a cmoplete list of available parameters.
+
+#
+# Trues/Scatter/Randoms binning options
+############################
+#
+# scatter_random_parameter of 1 histograms scatter events
+# separately from unscattered events.  As this is the first
+# binning variable, this will be the slowest varying
+# index, with the result that the output will consist of
+# unscattered event sinograms followed by scattered event
+# sinograms
+#
+INT scatter_random_param = 1
+INT	min_s                = 0
+INT max_s                = 99
+
+#
+# Sinogram binning (distance-angle binning)
+############################
+
+# Z axis binning
+#
+# This will create 3 2cm thick slices.  Slice number will
+# be the second most slowly varying index.
+#
+INT num_z_bins =  3
+REAL min_z     = -3
+REAL max_z     =  3
+
+# Transaxial binning.
+#
+
+INT num_td_bins = 128
+REAL     min_td = -36
+REAL     max_td = 36
+
+# Azimuthal angle bins
+#
+# As this is the last index parameter mentioned, it will be
+# the fastest varying.
+#
+INT num_aa_bins = 128
+
+#
+# Energy binning in keV
+############################
+#
+# Here we only use the energy binning option to create an energy
+# window - only photons in the indicated range will be accepted.
+# If we set num_e_bins = 0, even this will be turned off, i.e.,
+# no energy windowing would be applied.
+#
+INT num_e_bins = 1
+REAL     min_e = 110
+REAL     max_e = 141
+	
+#
+# Output files specification
+############################
+
+# Should the output from this simulation be added to output from
+# an earlier run?  (Only works if the count-, weight-, and
+# weight-squared- files have the same file names.)
+BOOL	add_to_existing_img = false
+
+# Specification of output file data type
+#
+# Specification of weight and weight-squared image data type
+# Weight weight_image_type = 2 for four byte reals
+# Weight weight_image_type = 3 for 8 byte reals
+INT		weight_image_type	= 2
+
+# Path to the binned values of photon weights
+STR weight_image_path = "tutor2.weight"
+
+# Path to the binned values of photon weights squared.
+STR weight_squared_image_path = "tutor2.weight2"
+
+# Path to the binned values of absolute photons count
+STR count_image_path = ""

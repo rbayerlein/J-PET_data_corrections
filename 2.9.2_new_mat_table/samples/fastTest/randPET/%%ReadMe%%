@@ -1,0 +1,98 @@
+This directory contains parameter files and data for a SimSET simulation. The
+simulation can be run using the command runRandPET.sh, and the resulting data
+can be analyzed using analyzeRandPET.sh.  These commands can also be run from
+the parent directory (along with similar commands in the sibling directories)
+using the commands runFast.sh and resultsFast.sh.
+
+runRandPET.sh uses the randoms-generation additions to SimSET.  This requires
+several steps.  First the usual phg utility is run to create a history
+(list-mode) file for detected photons:
+nice ../../../bin/phg randPET.phgin
+
+Next the timesort utility is used to sort the decays in the history file by
+decay time:
+nice ../../../bin/timesort -d randPET.tsparms
+
+The utility addrandoms then adds random coincidences to the history data:
+nice ../../../bin/addrandoms randPET.arparms
+
+Finally, the bin utility histograms the coincidences from the history file:
+nice ../../../bin/bin -d randPET.binin
+
+The object simulated is described in %%ReadMe%% in the parent directory,
+though the activity has been increased by a factor of 20 in order to increase
+the ratio of random events to prompt events (this is why a different activity
+index file, fastTest20.act_indexes, is specifed than in the other fastTest
+runs).  This simulation uses no importance sampling in the object, does not
+model positron range nor non-collinearity, and models coherent scatter in both
+tomograph and object.  For SimSET to generate random events, one must use
+a new feature:  rather than setting a number of decays to simulate, one sets
+the number of decays to simulate (num_to_simulate) to 0 and instead sets
+the scan time in seconds (length_of_scan).  SimSET uses the time and the
+activity to compute how many decays to simulate.  Randoms generation is
+currently incompatible with SimSET's importance sampling features
+(simulate_stratification, simulate_forced_detection, forced_non_absorption,
+and, in the detector parameters, do_forced_interaction).  No binning parameter
+file is given in the run file:  binning will be performed after the utility
+programs that add randoms to the data have been run.
+(See randPET.phgin.)
+
+A 'collimator' is included, but is only an annulus of air - it is here
+mainly as a placeholder for users who want to use this simulation as a
+starting point for their own.  Users can find examples of collimators in
+the fastTest directories PET2d, PET3d, and PETblock. 
+(See randPET.colparms.)
+
+The detector is a 3cm thick cylindrical ring of BGO at an inner radius of 
+30 cm, extending from -10 cm to 10 cm axially.  The detected photons are
+saved to a listmode file.  (See randPET.detparms.)
+
+The timesort utility requires three parameters: the input history file name,
+the output (sorted) history file name, and a buffersize which we set to 200
+(megabytes).  On systems with very little RAM, this buffersize may need to be
+made smaller, but in general the user is unlikely to need to change this
+parameter.  (See randPET.tsparms.)
+
+The addrandoms utility requires four parameters: the detector type (currently
+addrandoms only supports cylindrical and dual_headed), the input (sorted)
+history file, the output history file (with randoms added), and a
+coincidence timing window in nanoseconds.  (See randPET.arparms.)
+
+The bin utility uses a parameter file almost identical to the phg run 
+parameter file.  A different detector parameter file is specified with the 
+'history_file' parameter pointing to the randoms-added history file output 
+(See randPET.bin.detparms.)  Secondly, a binning parameters file is specified.
+by addrandoms. Outside of this, the bin utility parameter file can be 
+identical to the phg run parameter file.  (See randPET.binin.)
+
+The data are binned into an array consisting of three sub-arrays, one each for
+true coincidences, scatter coincidences, and random coincidences.  Each 
+sub-array consists of 15 azimuthal angle bins (phi), 3 polar angle bins 
+(theta), 5 transaxial distance bins (xr), and 5 axial distance bins (yr).  
+(See randPET.binparms.)
+
+runRandPET.sh runs the simulation.  
+
+The script analyzeRandPET.sh compares the results from the simulation with
+results run on our computers.  The comparisons are made using
+the SimSET utility 'ttest', which performs a t-test on the data bin-by-bin.
+analyzeRandPET.sh gives a summary of ttest's output for each simulation, e.g.:
+
+Minimum T-Test value = -3.344
+Maximum T-Test value = 3.487
+
+0.0 <= |T-Test| <= 1.0          = 1182 => %67.97
+0.0 <= |T-Test| <= 2.0          = 1671 => %96.09
+0.0 <= |T-Test| <= 3.0          = 1733 => %99.65
+0.0 <= |T-Test| <= 3.49         = 1739, => %100.00
+
+
+The absolute value of the ttest should be less than 1 approximately 67% of
+the time, less than 2 approximately 95% of the time, and less than 3 over
+99% of the time.  The maximum absolute value of the
+ttest should be between 2.5 and 4.5.  The random nature of the data may lead
+to a higher value on occasion, but the higher value should disappear if
+the simulation and analysis are rerun.
+
+If SimSET fails these conditions, further testing may be necessary.  Please
+contact us at simset@u.washington.edu.

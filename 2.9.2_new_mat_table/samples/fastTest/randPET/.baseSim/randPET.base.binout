@@ -1,0 +1,65 @@
+
+***********************
+About to process parameter file 'randPET.base.binin'
+
+***********************
+
+***********************
+Read in header.
+
+***********************
+
+***********************
+Check for input conflicts.
+
+***********************
+
+***********************
+Begin decay processing.
+
+***********************
+
+
+
+***************** Collimated Photon Statistics *************
+
+Total blue photons reaching collimator in coincidence = 0.
+Total pink photons reaching collimator in coincidence = 0.
+
+Total blue photons passing collimator = 0.
+Total pink photons passing collimator = 0.
+
+Total blue photon weight reaching collimator = 0.0000e+00.
+Total pink photon weight reaching collimator = 0.0000e+00.
+Total coincidence weight reaching collimator = 0.0000e+00.
+
+Total blue photon weight passing collimator = 0.0000e+00.
+Total pink photon weight passing collimator = 0.0000e+00.
+Total coincidence weight passing collimator = 0.0000e+00.
+
+Total blue photon weight rejected by collimator = 0.0000e+00.
+Total pink photon weight rejected by collimator = 0.0000e+00.
+
+****************************************************************
+
+
+***************** Processing Binning Data *************
+
+Total blue photons reaching the binning module in this simulation = 4253660
+Total pink photons reaching the binning module in this simulation = 4253660
+
+Total coincidences reaching the binning module in this simulation = 4253660
+Total accepted blue photons in this simulation = 3733880
+Total accepted pink photons in this simulation = 3289312
+Total accepted coincidences in this simulation = 2241065
+Sum of accepted coincidence weights in this simulation = 2.241065e+06
+Sum of accepted coincidence squared weights in this simulation = 2.241065e+06
+Quality factor in image data = 1.00e+00
+
+Writing count image.
+Writing weight image.
+	Converting weight file to single precision, this may take a while.
+Writing weight squared image.
+	Converting weight squared file to single precision, this may take a while.
+
+***************** Finished Processing Binning Data *************

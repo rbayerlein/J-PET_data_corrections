@@ -1,0 +1,49 @@
+This directory contains a series of sample simulations that form a quick
+test of SimSET functionality.  The parameter files for the simulations and
+benchmark results are contained in subdirectories of this directory.   Most
+benchmark results are from version 2.6.2.6;  simulations using features 
+unavailable in 2.6.2.6 use earliest compatible version.  Each subdirectory 
+has its own %%ReadMe%% giving a brief description of the simulation in it, 
+as well as information about interpreting the results.
+
+fastTest should run, as distributed, on littleendian CPUs.  If your
+computer is bigendian, please run useBigend.sh before running
+fastTest.
+
+Most of the simulations use a common activity/attenuation object from 
+fastTest subdirectory 'object'.  This is a three slice object.  The two 
+end slices consist of water with no activity.  The middle slice consists
+of 9 voxels in a 3x3 array.  The upper and lower rows of the attenuation
+object are bone, the middle row water.  The activity object is a point
+source at (6.67, 0, 2).  By looking at the object geometry given in
+a *.phgin file in one of the subdirectories, one sees that this will be
+in the middle slice in the leftmost voxel in the x-dimension and the
+center voxel in the y-dimension.
+
+The tomograph features are described in the subdirectories.
+
+Both the object and the tomographs simulated are quite fanciful.  They
+have been chosen to test and demonstrate a wide range of SimSET
+features.
+
+The shell script runFast.sh (in this directory) runs all the simulations. 
+The shell script resultsFast.sh presents comparisons of the simulation's
+results to the benchmark results.
+
+Files ending in "out" give redirected output from runs of the
+corresponding shell scripts (e.g., runFast.out is the output from 
+runFast.sh) or commands issued in the shell scripts (e.g.,
+DHCI/DHCI.phgout is produced by one of the commands in DHCI/runDHCI.sh).
+
+The test requires about 12 GB of free disk space.  This can be
+substantially reduced by executing the shell script runFast.noList.sh.
+This script does not test any of the list mode features.  To see the
+results, run the shell script resultsFast.noList.sh.
+
+These tests are intended to give a quick overview (while still requiring
+several hours running time) of whether SimSET is working.  When adding
+a new feature, they should help considerably in basic testing of the
+new version.  However, they are not intended as a complete test.  In
+particular, any new functions, algorithms, inputs and outputs will not
+be tested by fastTest:  the tester should design tests specifically for
+for such new features.

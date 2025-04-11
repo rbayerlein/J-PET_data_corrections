@@ -1,0 +1,3 @@
+The script .runBase.sh creates the baseline datasets by running scripts
+in sub-subdirectories named .baseSim (e.g., PET3d/.baseSim).  These
+simulations are intended for use by the SimSET development team only.

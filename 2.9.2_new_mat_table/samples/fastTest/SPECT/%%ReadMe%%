@@ -1,0 +1,45 @@
+This directory contains parameter files and data for a SimSET simulation. The
+simulation can be run using the command runSPECT.sh, and the resulting data
+can be analyzed using analyzeSPECT.sh.  These commands can also be run from
+the parent directory (along with similar commands in the sibling directories)
+using the commands runFast.sh and resultsFast.sh.
+
+The object simulated is described in the %%ReadMe%% file in the parent directory.
+This simulation uses stratification in the object, and models coherent scatter
+in both the object and tomograph.  (See SPECT.phgin.)
+
+The collimator is parallel-beam, 2 cm thick, with 0.25 cm hole radius, and
+0.01 cm septal thickness.  (See SPECT.colparms.)
+
+The modeled detector is 2.5 cm NaI with a 0.1 cm aluminum front cover.
+The detectors have perfect energy resolution.  (See SPECT.detparms.)
+
+The detector and collimator have 25 step-and-shoot positions.
+
+The data is binned into two scatter bins (true vs. scatter), 10 z bins,
+15 transaxial distance bins and 25 azimuthal angle bins (phi).  (See
+SPECT.binparms.)
+
+The script analyzeSPECT.sh compares the results from the two simulations with
+results from an earlier version of SimSET.  The comparisons are made using
+the SimSET utility 'ttest', which performs a t-test on the data bin-by-bin.
+analyzeSPECT.sh gives a summary of ttest's output for each simulation, e.g.:
+
+Minimum T-Test value = -3.344
+Maximum T-Test value = 3.487
+
+0.0 <= |T-Test| <= 1.0          = 1182 => %67.97
+0.0 <= |T-Test| <= 2.0          = 1671 => %96.09
+0.0 <= |T-Test| <= 3.0          = 1733 => %99.65
+0.0 <= |T-Test| <= 3.49         = 1739, => %100.00
+
+
+The absolute value of the ttest should be less than 1 approximately 67% of
+the time, less than 2 approximately 95% of the time, and less than 3 over
+99% of the time.  For this test the maximum absolute value of the
+ttest should be between 2.5 and 4.5.  The random nature of the data may lead
+to a higher value on occasion, but the higher value should disappear if
+the simulation and analysis are rerun.
+
+If SimSET fails these conditions, further testing may be necessary.  Please
+contact us at simset@u.washington.edu.

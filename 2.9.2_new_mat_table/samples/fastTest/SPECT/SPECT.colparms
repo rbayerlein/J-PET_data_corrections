@@ -1,0 +1,72 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest SPECT
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the collimator parameters file for the SPECT simulation
+#	in the fastTest suite.
+#
+#	This collimator uses the UNC geometric collimator module.
+#
+##############################################################################
+
+
+# Specify the collimator type 
+# Set collimator_type = simple_pet
+# Set collimator_type = monte_carlo_pet
+# Set collimator_type = simple_spect
+# Set collimator_type = unc_spect
+# Set collimator_type = slat
+
+# Specify the collimator type as SPECT geometric
+ENUM   collimator_type = unc_spect
+
+# Specify the hole geometry as parallel
+# Other options are
+# fan_beam
+# cone_beam
+ENUM    hole_geometry    = parallel
+
+# The focal_length is unused for parallel hole collimators
+# (could be left out)
+REAL    focal_length    = 0.0
+
+# Specify our radius of rotation, distance to face of collimator
+REAL    radius_of_rotation = 10.0
+
+# Specify the thickness (depth) of the collimator
+REAL    thickness = 2.0
+
+# Specify the hole radius
+REAL    hole_radius = 0.25
+
+# Specify septal thicknes
+# (note: HALF the minimum distance between collimator holes)
+REAL    septal_thickness = 0.01
+
+# Specify the axial limits of the collimator
+REAL    min_z = -6.0
+REAL    max_z = 6.0
+
+# Specify the first rotation angle
+REAL    start_angle = 0.0
+
+# Specify the last rotation angle
+REAL    stop_angle = 360.0
+
+# Specify the number of views
+INT        num_views = 25
+
+# Specify the pathname of the history file (empty string = no history file)
+STR        history_file = ""
+
+
+
+
+
+
+
+

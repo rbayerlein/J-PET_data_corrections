@@ -1,0 +1,267 @@
+##############################################################################	
+#	
+#	INDEX TRANSLATION FILE FOR THE PHG SIMULATION ACTIVITY INDEXES TO 
+#	Activity TABLE ENTRIES.
+#	
+#	RUN NAME:  This table translates the indices of Zubal's voxel_man/brain
+#		phantom to uniform activity in the soft tissues.
+#	CREATED:  Feb 2002 by Robert Harrison.
+#	OWNER:  SimSET
+#
+##############################################################################	
+0	0			outside phantom -> air
+1	4			skin -> brain
+2	4			brain -> brain
+3	4			spinal cord -> brain
+4	0			skull -> bone
+5	0			spine -> bone
+6	0			rib cage & sternum -> bone
+7	0			pelvis -> bone
+8	0			long bones -> bone
+9	4			skeletal muscle -> brain
+10	0			lungs -> lung
+11	4			heart -> brain
+12	4			liver -> brain
+13	4			gall bladder -> brain
+14	4			kidney -> brain
+15	4			pharynx -> brain
+16	4			esophagus -> brain
+17	4			stomach -> brain
+18	4			small bowel -> brain
+19	4			colon -> brain
+20	4			pancreas -> brain
+21	4			adrenals -> brain
+22	4			fat -> brain
+23	4			blood pool -> brain
+24	0			gas (bowel) -> air
+25	4			fluid (bowel) -> brain
+26	4 			bone marrow -> brain
+27	4			lymph nodes -> brain
+28	4			thyroid -> brain
+29	4			trachea -> brain
+30	4			cartilage -> brain
+31	4			spleen -> brain
+32	4			urine -> brain
+33	4			feces -> brain
+34	4			testes ->brain
+35	4			prostate -> brain
+36	0			unused
+37	4			rectum -> brain
+38	0			unused
+39	4			diaphragm -> brain
+40	4			bladder -> brain
+41	0			unused
+42	0			unused
+43      0                       unused
+44      0                       unused
+45      0                       unused
+46      0                       unused
+47      0                       unused
+48      0                       unused
+49      0                       unused
+50      0                       unused
+51      0                       unused
+52      0                       unused
+53      0                       unused
+54      0                       unused
+55      0                       unused
+56      0                       unused
+57      0                       unused
+58      0                       unused
+59      0                       unused
+60      0                       unused
+61      0                       unused
+62      0                       unused
+63 	4			lesion -> brain
+64	0
+65	0
+66	0
+67	0
+68	0
+69	0
+70	4		dens of axis -> brain
+71	0		jaw bone -> bone
+72	4       parotid gland -> brain
+73      0                       unused
+74	4		lacrimal glands -> brain
+75	4		spinal canal -> brain
+76	0		hard palate -> bone
+77	4		cerebellum -> brain
+78	4		tongue -> brain
+79	0
+80	0
+81	0		horn of mandible -> bone
+82	0		nasal septum -> brain
+83	4		white matter -> brain
+84	0		superior sagital sinus -> air
+85	4		medulla oblongota -> brain
+86	0
+87	0
+88	4		artificial lesion -> brain
+89	4		frontal lobes -> brain
+90	0
+91	4		pons -> brain
+92	4		third ventricle -> brain
+93	0
+94	0
+95	4		occipital lobes -> brain
+96	4		hippocampus -> brain
+97	4		pituitary gland -> brain
+98	4		cerebral fluid -> brain
+99	0		incus(ear bones) -> bone
+100	0		turbinates -> brain
+101	4		caudate nucleus -> brain
+102	0		zygoma -> brain
+103	4		insula cortex -> brain
+104	0		sinuses/mouth cavity -> air
+105	4		putamen -> brain
+106	4		optic nerve -> brain
+107	4		internal capsul -> brain
+108	4		septum pellucidium -> brain
+109	4		thalamus -> brain
+110	4		eyeball -> brain
+111	4		corpus collosum -> brain
+112	4		special region frontal lobes -> brain
+113	4		cerebral falx -> brain
+114	4		temporal lobes -> brain
+115	4		fourth ventricle -> brain
+116	4		frontal portion eyes -> brain
+117	4		parietal lobes -> brain
+118	4		amygdala - Brain
+119	4		eye -> brain
+120	4		globus pallidus -> brain
+121	4		lens -> brain
+122	4		cerebral aquaduct -> brain
+123	4		lateral ventricles -> brain
+124	4		prefrontal lobes -> brain
+125	0		teeth -> bone
+126	0
+127	0
+128	0
+129	0
+130	0
+131	0
+132	0
+133	0
+134	0
+135	0
+136	0
+137	0
+138	0
+139	0
+140	0
+141	0
+142	0
+143	0
+144	0
+145	0
+146	0
+147	0
+148	0
+149	0
+150	0
+151	0
+152	0
+153	0
+154	0
+155	0
+156	0
+157	0
+158	0
+159	0
+160	0
+161	0
+162	0
+163	0
+164	0
+165	0
+166	0
+167	0
+168	0
+169	0
+170	0
+171	0
+172	0
+173	0
+174	0
+175	0
+176	0
+177	0
+178	0
+179	0
+180	0
+181	0
+182	0
+183	0
+184	0
+185	0
+186	0
+187	0
+188	0
+189	0
+190	0
+191	0
+192	0
+193	0
+194	0
+195	0
+196	0
+197	0
+198	0
+199	0
+200	0
+201	0
+202	0
+203	0
+204	0
+205	0
+206	0
+207	0
+208	0
+209	0
+210	0
+211	0
+212	0
+213	0
+214	0
+215	0
+216	0
+217	0
+218	0
+219	0
+220	0
+221	0
+222	0
+223	0
+224	0
+225	0
+226	0
+227	0
+228	0
+229	0
+230	0
+231	0
+232	0
+233	0
+234	0
+235	0
+236	0
+237	0
+238	0
+239	0
+240	0
+241	0
+242	0
+243	0
+244	0
+245	0
+246	0
+247	0
+248	0
+249	0
+250	0
+251	0
+252	0
+253	0
+254	0
+255	0

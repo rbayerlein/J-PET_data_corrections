@@ -1,0 +1,27 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	randPET
+#       CREATED:	Dec 2008
+#       OWNER:		SimSET
+#
+#	This file gives parameters for the addrandoms program.
+#	It is intended for use with the fastTest simulation
+#	randPET.
+#
+##############################################################################
+
+#	detector_type for randoms simulation can be simple_pet (just applies
+#	Gaussian blurring to the energy with no tracking through the detector),
+#	dual-headed, or cylindrical (these are photon-tracking simulations)
+ENUM detector_type = cylindrical
+
+#	file pathname for the input history file (output from timesort)
+STR	history_file = "PETblockrand.dethist.srtd"
+
+# 	file pathname for the output history file with randoms added
+STR randoms_history_file = "PETblockrand.arhist"
+
+#	coincidence timing window in nanoseconds.
+REAL coincidence_timing_window_in_ns = 5

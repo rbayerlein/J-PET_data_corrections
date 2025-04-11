@@ -1,0 +1,49 @@
+This directory contains parameter files and data for a SimSET simulation. The
+simulation can be run using the command runPET2d.sh, and the resulting data
+can be analyzed using analyzePET2d.sh.  These commands can also be run from
+the parent directory (along with similar commands in the sibling directories)
+using the commands runFast.sh and resultsFast.sh.
+
+The object simulated is described in the %%ReadMe%% file in the parent directory.
+This simulation has importance sampling in the object, models positron
+range and non-collinearity, and models coherent scatter in the tomograph
+but not the object.  (See PET2d.phgin.)
+
+The collimator consists of four aluminum septa spread across the field-of-
+view.  (See PET2d.colparms.)
+
+The modeled detector is a cylindrical LSO detector with 15% FWHM energy
+resolution.  While it is  a solid chunk of LSO, it is represented as two 
+axial rings each consisting of two radial layers.  The data from this 
+simulation is compared to a simulation where the LSO is represented as 
+one piece to help validate the tracking across ring/layer boundaries.
+(See PET2d.detparms.)
+
+The data is binned into two scatter bins (true vs. scatter), 2x2 z bins
+(2 z bins for each photon), 2x2 energy bins (2 bins for each photon), 10
+transaxial distance bins and 15 azimuthal angle bins (phi).  (See
+PET2d.binparms.)
+
+The script analyzePET2d.sh compares the results from the two simulations with
+results from an earlier version of SimSET.  The comparisons are made using
+the SimSET utility 'ttest', which performs a t-test on the data bin-by-bin.
+analyzePET2d.sh gives a summary of ttest's output for each simulation, e.g.:
+
+Minimum T-Test value = -3.344
+Maximum T-Test value = 3.487
+
+0.0 <= |T-Test| <= 1.0          = 1182 => %67.97
+0.0 <= |T-Test| <= 2.0          = 1671 => %96.09
+0.0 <= |T-Test| <= 3.0          = 1733 => %99.65
+0.0 <= |T-Test| <= 3.49         = 1739, => %100.00
+
+
+The absolute value of the ttest should be less than 1 approximately 67% of
+the time, less than 2 approximately 95% of the time, and less than 3 over
+99% of the time.  For this test the maximum absolute value of the
+ttest should be between 2.5 and 4.5.  The random nature of the data may lead
+to a higher value on occasion, but the higher value should disappear if
+the simulation and analysis are rerun.
+
+If SimSET fails these conditions, further testing may be necessary.  Please
+contact us at simset@u.washington.edu.

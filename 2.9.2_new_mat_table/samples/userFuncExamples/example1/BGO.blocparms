@@ -1,0 +1,414 @@
+############################################################################
+#
+#  Block parameter file: BGO.blocparms
+#  Author/Owner:         Robert Harrison
+#  Comments:             Block detector for the fastTest PETblock simulation
+#                        
+#
+############################################################################
+
+# Reference point on block used for ring position & orientation.
+REAL	block_reference_x       =   0.00000000000000
+REAL	block_reference_y       =   0.00000000000000
+REAL	block_reference_z       =   0.00000000000000
+
+# BLOCK OUTER DIMENSIONS
+# Provides the outer bounds of the block.  The maximum and minimum extent of the block
+# are given with respect to the reference point.  The coordinates (X,Y,Z) represent the
+# radial, transaxial, and axial directions, respectively.
+REAL	block_x_minimum         =   0.00000000000000
+REAL	block_x_maximum         =   2.70000000000000
+REAL	block_y_minimum         =   -1.6000000000000
+REAL	block_y_maximum         =   1.6000000000000
+REAL	block_z_minimum         =   -1.6000000000000
+REAL	block_z_maximum         =   1.6000000000000
+
+INT    block_num_layers        =   3
+
+NUM_ELEMENTS_IN_LIST	block_layer_info_list = 5
+
+        REAL           block_layer_inner_x   = 0.000000
+                       # (must be == to outer x of previous layer)
+
+        REAL           block_layer_outer_x   = 0.100000
+
+        NUM_ELEMENTS_IN_LIST	block_layer_num_y_changes = 0
+
+        NUM_ELEMENTS_IN_LIST	block_layer_num_z_changes = 0
+
+        NUM_ELEMENTS_IN_LIST	block_layer_material_elements  = 1
+            # Material element  0
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+
+NUM_ELEMENTS_IN_LIST	block_layer_info_list = 5
+
+        REAL           block_layer_inner_x   = 0.100000
+                       # (must be == to outer x of previous layer)
+
+        REAL           block_layer_outer_x   = 2.600000
+
+        NUM_ELEMENTS_IN_LIST	block_layer_num_y_changes = 8
+        REAL           block_layer_y_change  = -1.500000
+        REAL           block_layer_y_change  = -1.450000
+        REAL           block_layer_y_change  = -0.550000
+        REAL           block_layer_y_change  = -0.450000
+        REAL           block_layer_y_change  = 0.450000
+        REAL           block_layer_y_change  = 0.550000
+        REAL           block_layer_y_change  = 1.450000
+        REAL           block_layer_y_change  = 1.500000
+
+        NUM_ELEMENTS_IN_LIST	block_layer_num_z_changes = 8
+        REAL           block_layer_z_change  = -1.500000
+        REAL           block_layer_z_change  = -1.450000
+        REAL           block_layer_z_change  = -0.550000
+        REAL           block_layer_z_change  = -0.450000
+        REAL           block_layer_z_change  = 0.450000
+        REAL           block_layer_z_change  = 0.550000
+        REAL           block_layer_z_change  = 1.450000
+        REAL           block_layer_z_change  = 1.500000
+
+        NUM_ELEMENTS_IN_LIST	block_layer_material_elements  = 81
+            # Material element  0
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  1
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  2
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  3
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  4
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  5
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  6
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  7
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  8
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  9
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  10
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  11
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  12
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  13
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  14
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  15
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  16
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  17
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  18
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  19
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  20
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  21
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  22
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  23
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  24
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  25
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  26
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  27
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  28
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  29
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  30
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  31
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  32
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  33
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  34
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  35
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  36
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  37
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  38
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  39
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  40
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  41
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  42
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  43
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  44
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  45
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  46
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  47
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  48
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  49
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  50
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  51
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  52
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  53
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  54
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  55
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  56
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  57
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  58
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  59
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  60
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 18
+                BOOL	block_material_is_active = TRUE
+            # Material element  61
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  62
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  63
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  64
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  65
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  66
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  67
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  68
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  69
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  70
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 28
+                BOOL	block_material_is_active = FALSE
+            # Material element  71
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  72
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  73
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  74
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  75
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  76
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  77
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  78
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  79
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+            # Material element  80
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 20
+                BOOL	block_material_is_active = FALSE
+
+NUM_ELEMENTS_IN_LIST	block_layer_info_list = 5
+
+        REAL           block_layer_inner_x   = 2.600000
+                       # (must be == to outer x of previous layer)
+
+        REAL           block_layer_outer_x   = 2.700000
+
+        NUM_ELEMENTS_IN_LIST	block_layer_num_y_changes = 0
+
+        NUM_ELEMENTS_IN_LIST	block_layer_num_z_changes = 0
+
+        NUM_ELEMENTS_IN_LIST	block_layer_material_elements  = 1
+            # Material element  0
+            NUM_ELEMENTS_IN_LIST	block_material_info_list = 2
+                INT	block_material_index = 27
+                BOOL	block_material_is_active = FALSE
+

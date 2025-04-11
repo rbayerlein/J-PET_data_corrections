@@ -1,0 +1,95 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest PET2d
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the binning parameters file of the baseline PET2d simulation
+#	for the fastTest suite.
+#
+##############################################################################
+
+#
+# Trues/Scatter binning options
+############################
+#
+#
+INT		scatter_param	=	1
+INT		min_s			=	0
+INT		max_s			=	100
+
+# Z axis
+##############################
+INT		num_z_bins		=	2
+REAL	min_z			=	-4.0
+REAL	max_z			=	4.0
+
+#
+# Energy binning in keV
+############################
+INT	num_e1_bins		=	2
+INT	num_e2_bins		=	2
+REAL	min_e			=	300.0
+REAL	max_e			=	650.0
+
+#
+# Sinogram binning (distance-angle binning)
+############################
+
+# Transaxial distance binning.
+# 	Bins the distance of the measured line-of-response from the tomograph axis.
+#
+INT	num_td_bins		=	10
+REAL	min_td			=	-10.0
+REAL	max_td			=	 10.0
+
+# Azimuthal angle bins
+#	Bins the angle the line-of-response makes with the x-axis.  For PET, these
+#	angles are between 0 and pi, for SPECT they are between 0 and 2pi.
+#
+INT	num_aa_bins		=	15
+
+#
+# Output files specification
+############################
+
+# Specification of weight image data type
+# Weight weight_image_type = 2 for four byte reals
+# Weight weight_image_type = 3 for 8 byte reals
+INT		weight_image_type	= 2
+
+# Specification of count image data type
+# Weight weight_image_type = 0 for one byte integers
+# Weight weight_image_type = 1 for two byte integers
+# Weight weight_image_type = 2 for four byte integers
+INT		count_image_type	= 2
+
+# Flag to indicate whether or not to add to existing images
+BOOL	add_to_existing_img = false
+
+# Path to the binned values of photon weights
+STR		weight_image_path			= "../PET2d.base.wt"
+
+# Path to the binned values of photon weights squared.
+STR		weight_squared_image_path	= "../PET2d.base.wtsq"
+
+# Path to the binned values of absolute photons count
+STR		count_image_path			= "../PET2d.base.ct"
+
+#
+# Run-time precision
+############################
+
+# When the following value is set to false (or omitted), the weight
+# and weight-squared values are summed in double precision (eight-byte)
+# even if single precision (four-byte) output is requested.  The output
+# will be more accurate if this variable is set to false, but SimSET
+# will require more memory.
+#  
+# We suggest this parameter is left false, however, for some simulations
+# SimSET's memory requirements may be so great as to require that it be
+# be set true.
+BOOL    sum_according_to_type   = false
+

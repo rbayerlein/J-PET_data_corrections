@@ -1,0 +1,16 @@
+modality: PET
+scanner radius: 437.6
+number of rings in scanner: 1
+number of elements: 624
+number of layers: 1
+number of crystals in layer: 624
+crystals size depth: 20
+crystals size transaxial: 4
+crystals size axial: 4
+voxels number transaxial: 256
+voxels number axial: 128
+field of view transaxial: 768.
+field of view axial: 256.
+mean depth of interaction: -1
+min angle difference: 90
+description: 1 ring PET system

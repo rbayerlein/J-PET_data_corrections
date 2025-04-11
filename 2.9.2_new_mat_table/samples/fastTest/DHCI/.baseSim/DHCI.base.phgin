@@ -1,0 +1,118 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest DHCI
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the run file for the baseline DHCI simulation for
+#	the fastTest suite.
+#
+##############################################################################
+
+# RUNTIME OPTIONS
+INT     num_to_simulate         		= 130000000
+INT 	length_of_scan					= 60
+BOOL    simulate_SPECT                  = false
+REAL    photon_energy                   = 511.0
+REAL    minimum_energy                  = 150.0
+BOOL    model_coherent_scatter_in_obj   = false
+BOOL    model_coherent_scatter_in_tomo  = false
+BOOL    adjust_for_collinearity         = false
+BOOL    adjust_for_positron_range       = true
+ENUM    isotope                         = c11
+INT     random_seed                     = 0
+
+# IMPORTANCE SAMPLING OPTIONS
+BOOL    simulate_stratification         = false
+BOOL    simulate_forced_detection       = false
+BOOL    forced_non_absorbtion           = false
+REAL    weight_window_ratio             = 1.0
+
+# OBJECT GEOMETRY VALUES
+BOOL    point_source_voxels             = true
+BOOL    line_source_voxels              = false
+NUM_ELEMENTS_IN_LIST    object = 4
+        INT             num_slices = 3
+        NUM_ELEMENTS_IN_LIST    slice = 9
+                INT     slice_number  = 0
+                REAL    zMin = -10.0
+                REAL    zMax =  0.0
+                REAL    xMin = -10.0
+                REAL    xMax = 10.0
+                REAL    yMin = -10.0
+                REAL    yMax = 10.0
+                INT     num_X_bins = 1
+                INT     num_Y_bins = 1
+        NUM_ELEMENTS_IN_LIST    slice = 9
+                INT     slice_number  = 1
+                REAL    zMin =  0.0
+                REAL    zMax =  4.0
+                REAL    xMin = -10.0
+                REAL    xMax = 10.0
+                REAL    yMin = -10.0
+                REAL    yMax = 10.0
+                INT     num_X_bins = 3
+                INT     num_Y_bins = 3
+        NUM_ELEMENTS_IN_LIST    slice = 9
+                INT     slice_number  = 2
+                REAL    zMin =  4.0
+                REAL    zMax = 10.0
+                REAL    xMin = -10.0
+                REAL    xMax = 10.0
+                REAL    yMin = -10.0
+                REAL    yMax = 10.0
+                INT     num_X_bins = 1
+                INT     num_Y_bins = 1
+
+# TARGET CYLINDER INFORMATION
+NUM_ELEMENTS_IN_LIST target_cylinder = 3
+        REAL    target_zMin =  -6.0
+        REAL    target_zMax =   6.0
+        REAL    radius =        10.0
+REAL    acceptance_angle                = 90.0
+
+# COHERENT ANGULAR DISTRIBUTION FILES
+# STR coherent_scatter_table = "../../../../phg.data/phg_ad_files"
+
+# ISOTOPE DATA
+STR isotope_data_file = "../../../../phg.data/isotope_positron_energy_data"
+
+# ACTIVITY INDEX FILE
+STR     activity_indexes = "../../object/fastTest.act_indexes"
+
+# ACTIVITY TABLE FILE
+STR     activity_table = "../../../../phg.data/phg_act_table"
+
+# ACTIVITY INDEX TO TABLE TRANSLATION FILE
+STR     activity_index_trans = "../../../../phg.data/phg_act_index_trans"
+
+# ATTENUATION INDEX FILE
+STR     attenuation_indexes = "../../object/fastTest.att_indexes"
+
+# ATTENUATION TABLE FILE
+STR  attenuation_table = "../../../../phg.data/phg_att_table"
+
+# ATTENUATION INDEX TO TABLE TRANSLATION FILE
+STR     attenuation_index_trans = "../../../../phg.data/phg_att_index_trans"
+
+# PRODUCTIVITY INPUT TABLE FILE
+STR     productivity_input_table = ""
+
+# PRODUCTIVITY TABLE FILE
+STR productivity_output_table = ""
+
+# COLLIMATOR PARAMETER FILE
+STR     collimator_params_file = "DHCI.base.colparms"
+
+# DETECTOR PARAMETER FILE
+STR     detector_params_file = "DHCI.base.detparms"
+
+# BINNING PARAMATER FILE
+STR     bin_params_file  = "DHCI.base.binparms"
+
+# HISTORY FILE
+STR     history_file = ""
+
+

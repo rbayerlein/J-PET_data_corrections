@@ -1,0 +1,75 @@
+##############################################################################
+#
+#	PARAMETER FILE FOR THE PHG COLLIMATOR MODULE
+#
+#       RUN NAME:	fastTest DHCI
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the collimator file for the baseline DHCI simulation for
+#	the fastTest suite.
+#
+#	This parameter file is setup to use the "slat" collimator module.
+##############################################################################
+
+# Specify the collimator type
+# Set collimator_type = simple_pet
+# Set collimator_type = monte_carlo_pet
+# Set collimator_type = simple_spect
+# Set collimator_type = slat
+# Set collimator_type = unc_spect
+
+# Specify the collimator type as slat
+ENUM	collimator_type = slat
+
+# Specify the number of radial layers in the collimator.
+INT	num_layers = 2
+
+#	Give the inner and outer radius (measured at the center) for 
+#	first layer  (closest to field-of-view).
+	REAL	inner_radius = 10.0
+	REAL	outer_radius = 12.0
+
+#	Assign slats for first layer--space between the slats is
+#	automatically assigned to material 0 = air.
+	INT	num_slats = 4
+
+		REAL	start =	-6.0
+		REAL	end =	-5.95
+		INT	material = 20
+
+		REAL	start = -2.05
+		REAL	end =	-1.95
+		INT	material = 8
+
+		REAL    start =  1.95
+		REAL    end =    2.05
+		INT     material = 8
+
+		REAL	start =	 5.95
+		REAL	end	= 	 6.0
+		INT	material = 20
+
+#	Assign radius for second layer.
+	REAL	inner_radius = 12.0
+	REAL	outer_radius = 14.0
+
+#	Assign slats for second layer
+	INT	num_slats = 3
+	
+		REAL    start   = -4.05
+		REAL    end     = -3.95
+		INT     material = 8
+
+		REAL    start   = -0.05
+		REAL    end     =  0.05
+		INT     material = 20
+
+		REAL    start   =  3.95
+		REAL    end     =  4.05
+		INT     material = 8
+
+
+# Specify the pathname of the history file (empty string = no history file)
+STR		history_file = ""
+

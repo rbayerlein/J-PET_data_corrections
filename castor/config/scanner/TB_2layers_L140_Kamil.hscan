@@ -1,0 +1,15 @@
+modality: PET
+scanner name: TB_2layers_L140_Kamil
+description: Benchmark geometry
+number of elements: 430080
+number of layers: 2
+voxels number transaxial: 161
+voxels number axial: 161
+field of view transaxial: 45
+field of view axial: 45
+number of crystals in layer: 215040, 215040
+crystals size axial: 15.0, 15.0
+crystals size trans: 3.0, 3.0
+crystals size depth: 1.25, 1.25
+mean depth of interaction: -1, -1
+min angle difference: 90

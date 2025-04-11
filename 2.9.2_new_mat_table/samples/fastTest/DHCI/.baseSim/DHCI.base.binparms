@@ -1,0 +1,92 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest DHCI
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the binning parameters file for the baseline simulation of
+#	DHCI simulation for the fastTest suite.
+#
+##############################################################################
+
+#
+# Trues/Scatter binning options
+############################
+#
+#
+INT		scatter_param	=	1
+INT		min_s			=	0
+INT		max_s			=	100
+
+# Energy binning in keV
+############################
+#
+#   two indices are used for each of energy and z-position in PET,
+#	one for each coincidence photon.
+#
+INT		num_e1_bins		=	2
+INT		num_e2_bins		=	2
+REAL	min_e			=	275.0
+REAL	max_e			=	675.0
+
+#
+# Sinogram binning (distance-angle binning)
+############################
+
+# Z axis binning
+#
+# For PET, if num_z_bins > 1, then there will be separate z binning
+# indices for the two photons unless one of 'do_ssrb' or 'do_msrb'
+# is set to true.
+INT		num_z_bins		=	3
+REAL	min_z			=	-6.0
+REAL	max_z			=	6.0
+
+# Transaxial distance binning.
+# 	Bins the distance of the measured line-of-response from the tomograph axis.
+# 	NOTE: Setting min_td and max_td to any value less than the radius of the
+# 	object cylinder may lead to a truncated data set and cause problems with
+# 	image reconstruction.
+#
+INT	num_td_bins		=	5
+REAL	min_td			=	-10.0
+REAL	max_td			=	 10.0
+
+# Azimuthal angle bins
+#	Bins the angle the line-of-response makes with the x-axis.  For PET, these
+#	angles are between 0 and pi, for SPECT they are between 0 and 2pi.
+#
+INT	num_aa_bins		=	8
+
+#
+# Output files specification
+############################
+
+# Should the output from this simulation be added to output from
+# an earlier run?  (Only works if the count-, weight-, and
+# weight-squared- files have the same file names.)
+BOOL	add_to_existing_img = false
+
+# Specification of weight and weight-squared image data type
+# Weight weight_image_type = 2 for four byte reals
+# Weight weight_image_type = 3 for 8 byte reals
+INT		weight_image_type	= 2
+
+# Specification of count image data type
+# Count count_image_type = 0 for one byte integers
+# Count count_image_type = 1 for two byte integers
+# Count count_image_type = 2 for four byte integers
+INT		count_image_type	= 2
+
+# Path to the binned values of photon weights
+STR		weight_image_path			= "../DHCI.base.wt"
+
+# Path to the binned values of photon weights squared.
+STR		weight_squared_image_path	= "../DHCI.base.wtsq"
+
+# Path to the binned values of absolute photons count
+STR		count_image_path			= "../DHCI.base.ct"
+
+

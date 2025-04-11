@@ -1,0 +1,47 @@
+ENUM detector_type = block
+BOOL do_forced_interaction = false
+REAL reference_energy_keV = 511.0
+REAL energy_resolution_percentage = 11.700000
+STR history_file = "@simset/repo/scanner/uexplorer/unitedimaging_35x84_24x8_diameter786mm.pout.1"
+STR history_params_file = "@simset/repo/scanner/uexplorer/scanner.histparms"
+NUM_ELEMENTS_IN_LIST blocktomo_num_rings = 8
+#Ring 0
+	NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3
+		STR blocktomo_ring_parameter_file = "@simset/repo/scanner/uexplorer/unit.ringparms"
+		REAL blocktomo_ring_axial_shift = -8.478750e+01
+		REAL blocktomo_ring_transaxial_rotation =  0
+#Ring 1
+	NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3
+		STR blocktomo_ring_parameter_file = "@simset/repo/scanner/uexplorer/unit.ringparms"
+		REAL blocktomo_ring_axial_shift = -6.056250e+01
+		REAL blocktomo_ring_transaxial_rotation =  0
+#Ring 2
+	NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3
+		STR blocktomo_ring_parameter_file = "@simset/repo/scanner/uexplorer/unit.ringparms"
+		REAL blocktomo_ring_axial_shift = -3.633750e+01
+		REAL blocktomo_ring_transaxial_rotation =  0
+#Ring 3
+	NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3
+		STR blocktomo_ring_parameter_file = "@simset/repo/scanner/uexplorer/unit.ringparms"
+		REAL blocktomo_ring_axial_shift = -1.211250e+01
+		REAL blocktomo_ring_transaxial_rotation =  0
+#Ring 4
+	NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3
+		STR blocktomo_ring_parameter_file = "@simset/repo/scanner/uexplorer/unit.ringparms"
+		REAL blocktomo_ring_axial_shift = 1.211250e+01
+		REAL blocktomo_ring_transaxial_rotation =  0
+#Ring 5
+	NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3
+		STR blocktomo_ring_parameter_file = "@simset/repo/scanner/uexplorer/unit.ringparms"
+		REAL blocktomo_ring_axial_shift = 3.633750e+01
+		REAL blocktomo_ring_transaxial_rotation =  0
+#Ring 6
+	NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3
+		STR blocktomo_ring_parameter_file = "@simset/repo/scanner/uexplorer/unit.ringparms"
+		REAL blocktomo_ring_axial_shift = 6.056250e+01
+		REAL blocktomo_ring_transaxial_rotation =  0
+#Ring 7
+	NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3
+		STR blocktomo_ring_parameter_file = "@simset/repo/scanner/uexplorer/unit.ringparms"
+		REAL blocktomo_ring_axial_shift = 8.478750e+01
+		REAL blocktomo_ring_transaxial_rotation =  0

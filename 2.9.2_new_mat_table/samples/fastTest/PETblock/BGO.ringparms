@@ -1,0 +1,87 @@
+#######################################
+#
+#  Ring parameter file: BGO.ringparms
+#  Author/Owner:        Robert Harrison
+#  Comments:            
+#
+#######################################
+
+# RING OUTER DIMENSIONS
+# Provides the outer dimensions of the ring: all the blocks must fall entirely
+# within these boundaries.  The ring is bounded with a maximum and minimum
+# z value axially and by elliptical cylinders transaxially.  These bounds are not
+# in tomograph coordinates: the ring can shifted up or down axially or rotated
+# transaxially when placing it in the tomograph.
+REAL	ring_x_inner_radius     =   4.50000000000000
+REAL	ring_x_outer_radius     =   8.00000000000000
+REAL	ring_y_inner_radius     =   4.50000000000000
+REAL	ring_y_outer_radius     =   8.00000000000000
+REAL	ring_z_minimum          =   -1.6000000000000
+REAL	ring_z_maximum          =   1.6000000000000
+
+NUM_ELEMENTS_IN_LIST   ring_num_blocks_in_ring  = 8
+
+# Block    0
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "BGO.blocparms"
+REAL     ring_block_radial_position                 = 4.50000000000000
+REAL     ring_block_angular_position                = 0.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    1
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "BGO.blocparms"
+REAL     ring_block_radial_position                 = 4.50000000000000
+REAL     ring_block_angular_position                = 45.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    2
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "BGO.blocparms"
+REAL     ring_block_radial_position                 = 4.50000000000000
+REAL     ring_block_angular_position                = 90.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    3
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "BGO.blocparms"
+REAL     ring_block_radial_position                 = 4.50000000000000
+REAL     ring_block_angular_position                = 135.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    4
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "BGO.blocparms"
+REAL     ring_block_radial_position                 = 4.50000000000000
+REAL     ring_block_angular_position                = 180.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    5
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "BGO.blocparms"
+REAL     ring_block_radial_position                 = 4.50000000000000
+REAL     ring_block_angular_position                = 225.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    6
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "BGO.blocparms"
+REAL     ring_block_radial_position                 = 4.50000000000000
+REAL     ring_block_angular_position                = 270.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+
+# Block    7
+NUM_ELEMENTS_IN_LIST   ring_block_description_list  = 5
+STR      ring_block_parameter_file                  = "BGO.blocparms"
+REAL     ring_block_radial_position                 = 4.50000000000000
+REAL     ring_block_angular_position                = 315.00000000000000
+REAL     ring_block_z_position                      = 0.00000000000000
+REAL     ring_block_transaxial_orientation          = 0.00000000000000
+

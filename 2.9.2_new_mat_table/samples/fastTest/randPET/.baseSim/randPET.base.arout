@@ -1,0 +1,71 @@
+
+
+
+Command line: ../../../../../2.9/bin/addrandoms randPET.base.arparms 
+
+Execution of addrandoms occurred at 22:37:26 15-Apr-09
+
+Name of input history file: randPET.base.dethist.srtd.
+Coincidence window = 5.000 nanoseconds.
+Name of output randoms-added history file: randPET.base.dethist.srtd.
+
+
+******* Beginning creation of randoms-added data (22:37 15-Apr-09) *******
+111 MB read in,  CPU seconds = 10039 (22:37 15-Apr-09).
+223 MB read in,  CPU seconds = 19687 (22:37 15-Apr-09).
+334 MB read in,  CPU seconds = 29153 (22:37 15-Apr-09).
+446 MB read in,  CPU seconds = 38763 (22:37 15-Apr-09).
+558 MB read in,  CPU seconds = 48527 (22:37 15-Apr-09).
+669 MB read in,  CPU seconds = 58189 (22:37 15-Apr-09).
+781 MB read in,  CPU seconds = 67960 (22:37 15-Apr-09).
+892 MB read in,  CPU seconds = 77261 (22:38 15-Apr-09).
+1004 MB read in,  CPU seconds = 86677 (22:38 15-Apr-09).
+1116 MB read in,  CPU seconds = 96197 (22:38 15-Apr-09).
+1227 MB read in,  CPU seconds = 105623 (22:38 15-Apr-09).
+1339 MB read in,  CPU seconds = 118321 (22:38 15-Apr-09).
+1451 MB read in,  CPU seconds = 127750 (22:38 15-Apr-09).
+1562 MB read in,  CPU seconds = 137411 (22:38 15-Apr-09).
+1674 MB read in,  CPU seconds = 146766 (22:38 15-Apr-09).
+1785 MB read in,  CPU seconds = 156298 (22:38 15-Apr-09).
+1897 MB read in,  CPU seconds = 165755 (22:38 15-Apr-09).
+2009 MB read in,  CPU seconds = 175232 (22:38 15-Apr-09).
+2120 MB read in,  CPU seconds = 184917 (22:38 15-Apr-09).
+2232 MB read in,  CPU seconds = 194384 (22:39 15-Apr-09).
+2343 MB read in,  CPU seconds = 203888 (22:39 15-Apr-09).
+2455 MB read in,  CPU seconds = 213703 (22:39 15-Apr-09).
+2567 MB read in,  CPU seconds = 223180 (22:39 15-Apr-09).
+2678 MB read in,  CPU seconds = 232894 (22:39 15-Apr-09).
+2790 MB read in,  CPU seconds = 242698 (22:39 15-Apr-09).
+2901 MB read in,  CPU seconds = 252254 (22:39 15-Apr-09).
+3013 MB read in,  CPU seconds = 261698 (22:39 15-Apr-09).
+3125 MB read in,  CPU seconds = 271437 (22:39 15-Apr-09).
+3135 MB read in,  CPU seconds = 272251 (22:39 15-Apr-09).
+******* Creation of randoms-added data complete (22:39 15-Apr-09) *******
+
+	Number of decays read in: 28095805
+
+	Number of decays written out: 4253660
+	Of the decays written out, 2159373 were written out unchanged.
+	Of the decays written out, 2094287 were randoms created by addrandoms.
+
+	Number of decays lost as triples: 3092116
+
+	Number of decays lost to correct windowing: 362364
+
+	Histogram of the number of decays found per time window:
+
+	Time windows with 1 decay  =		20090387
+	Time windows with 2 decays =		3100916
+	Time windows with 3 decays =		478785
+	Time windows with 4 decays =		74454
+	Time windows with 5 decays =		11313
+	Time windows with 6 decays =		1803
+	Time windows with 7 decays =		231
+	Time windows with 8 decays =		44
+	Time windows with 9 decays =		7
+	Time windows with 10 or more decays =	0
+
+
+
+
+Execution of addrandoms finished at 22:39:35 15-Apr-09

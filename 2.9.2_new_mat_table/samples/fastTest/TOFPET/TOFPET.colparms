@@ -1,0 +1,139 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest TOFPET
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This file gives parameters for a 2d PET collimator.
+#	It is intended for use with the fastTest suite.
+#
+#	This parameter file is setup to use the "Monte-Carlo" collimator module.
+#	The use of aluminum for the septa is intended to create
+#	detectable scatter, though it would probably require longer runs
+#	than fastTest for the collimator scatter to create statistically
+#	significant differences in the binned data.
+#
+##############################################################################
+
+# Specify the collimator type
+# Set collimator_type = simple_pet
+# Set collimator_type = monte_carlo_pet
+# Set collimator_type = simple_spect
+# Set collimator_type = unc_spect
+
+# This will be a Monte-Carlo PET collimator
+ENUM collimator_type = monte_carlo_pet
+
+# We have one "layer" radially of rectangular-profile septa
+NUM_ELEMENTS_IN_LIST	layers_list = 1
+
+	# We have seven segments in the layer,
+	# air-aluminum-air-aluminum-air-aluminum-air-aluminum...
+	NUM_ELEMENTS_IN_LIST	segment_list = 11
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 0
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z = -6.0
+			REAL		inner_max_z = -4.05
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			# The segments are "parallel", which is to say they have a
+			# rectangular profile in the z-r plane.
+			ENUM		seg_type = parallel
+			INT			material = 21
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z = -4.05
+			REAL		inner_max_z = -3.95
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 0
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z = -3.95
+			REAL		inner_max_z = -2.05
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 21
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z = -2.05
+			REAL		inner_max_z = -1.95
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 0
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z = -1.95
+			REAL		inner_max_z = -0.05
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 21
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z = -0.05
+			REAL		inner_max_z =  0.05
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 0
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z =  0.05
+			REAL		inner_max_z =  1.95
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 21
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z =  1.95
+			REAL		inner_max_z =  2.05
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 0
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z =  2.05
+			REAL		inner_max_z =  3.95
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 21
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z =  3.95
+			REAL		inner_max_z =  4.05
+
+		# A segment requires 6 pieces of info to define it.
+		NUM_ELEMENTS_IN_LIST	segment = 6
+			ENUM		seg_type = parallel
+			INT			material = 0
+			REAL		inner_radius = 12.0
+			REAL		outer_radius = 16.0
+			REAL		inner_min_z =  4.05
+			REAL		inner_max_z =  6.0
+
+
+# Specify output file for history (empty string for no history file)
+STR	history_file = ""

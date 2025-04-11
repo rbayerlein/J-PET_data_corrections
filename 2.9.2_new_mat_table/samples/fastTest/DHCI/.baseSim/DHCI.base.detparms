@@ -1,0 +1,88 @@
+##############################################################################
+#
+#       PARAMETER FILE FOR THE PHG SIMULATION
+#
+#       RUN NAME:	fastTest DHCI
+#       CREATED:	July 2004
+#       OWNER:		SimSET
+#
+#	This is the detector parameters file for the baseline run of the
+#	DHCI simulation the fastTest suite.
+#
+#	This is a detector parameters file for a dual-headed coincidence
+#	imaging system.
+#
+##############################################################################
+
+
+
+#	Specify type of detector - options are:
+#
+#	simple_pet		- performs energy blur according to parameters
+#	simple_spect	- performs energy blur according to parameters
+#	unc_spect		- uses the "UNC" algorithm for geometric collimation
+#	planar			- single block detector for SPECT/Planar
+#	cylindrical		- solid cylindrical detector for PET/PVI
+#	dual_headed		- two planar blocks for dual headed coincidence imaging
+
+ENUM detector_type = dual_headed
+
+#	This  detector has an aluminum 'front cover', them a single layer
+#	of active crystal.  Interactions
+#	in an active layer contribute to centroid and energy calculations
+
+INT		plnr_num_layers = 2
+
+#	Specify the inner radius of the detector block
+REAL	plnr_inner_radius = 14.1
+
+#	Specify the transaxial length of the block
+REAL	plnr_transaxial_length = 30.0
+
+#	Specify the axial length of the block (Z-axis)
+REAL	plnr_axial_length = 12.0
+
+#	Specify the number of views (ie the number of azimuthal angles)
+#	0 gives constant rotation.
+INT		plnr_num_views = 0
+REAL	plnr_min_angle = 0.0
+REAL	plnr_max_angle = 180.0
+
+#	Specify layer specific information
+#	The first layer is for aluminum front cover
+	NUM_ELEMENTS_IN_LIST	plnr_layer_info_list = 3
+
+		REAL	plnr_layer_depth = 0.1
+		
+	#	material is aluminum
+		INT	plnr_layer_material = 20
+		
+		BOOL	plnr_layer_is_active = false
+
+
+#	The second is the active crystal, NaI
+	NUM_ELEMENTS_IN_LIST	plnr_layer_info_list = 3
+
+		REAL	plnr_layer_depth = 2.5
+		
+#		material is NaI
+		INT	plnr_layer_material = 9
+		
+		BOOL	plnr_layer_is_active = true
+
+
+
+# Specify reference energy of the photons (keV)
+REAL    reference_energy_keV = 511.0
+
+# Specify the FWHM (%) at the reference energy
+# Detected photon energy will be blurred by a Gaussian with this resolution.
+REAL    energy_resolution_percentage = 10
+
+# empty strings indicate that no detector history file will be created.
+STR history_params_file = ""
+STR	history_file = ""
+
+# forced interaction is an importance sampling option.
+# It forces at least one interaction to occur in the detector block.
+BOOL do_forced_interaction = true

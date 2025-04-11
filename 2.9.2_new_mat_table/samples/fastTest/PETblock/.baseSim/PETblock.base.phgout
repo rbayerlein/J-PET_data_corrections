@@ -1,0 +1,142 @@
+
+
+
+Command line: ../../../../../2.9.1/bin/phg PETblock.base.phgin 
+
+Execution of phg occurred on 04 06 2011 (09:16:45 AM)
+Simulating PET (coincidences only).
+Stratification is off.
+Forced Detection is off.
+Forced non-absorption is off.
+Modelling positron range is on.
+	Isotope being modelled is f18
+Modelling non-collinearity is on.
+Modelling coherent scatter in object is off.
+Modelling coherent scatter in tomograph is on.
+Modelling polarization is off.
+Photon energy is            511.0 keV.
+Minimum energy threshold is 200.0
+Acceptance angle is (+/-) 90.0 degrees.
+Sine of acceptance angle is 1.000.
+Number of decays to simulate (user-supplied) = 60000000.
+Scan time =   100.000 seconds.
+Collimator modelling is off.
+Detector modelling is on.
+Binning is on.
+Creation of target-cylinder history file is off.
+Debug options = 0.
+Voxel as point source is on.
+Voxel as line source is off.
+Random seed is 1302106600  (from system clock).
+
+
+ Detector Parameters for '../PETblock.detparms'
+
+	Detector type is block tomograph
+	Forced interaction is off
+	Number of rings in tomograph is 1
+	Ring 0 axial shift is 0.00
+	Ring 0 transaxial rotation is 0.00
+	The geometry of ring 0 is defined in the file BGO.ringparms:
+		Ring 0 lies outside the circular cylinder of radius 4.50.
+		Ring 0 lies inside the circular cylinder of radius 8.00.
+		Ring 0's minimum axial value is -1.60.
+		Ring 0's maximum axial value is 1.60.
+		Ring 0 consists of 8 blocks.
+		Only block positions within ring reported below, internal structure of blocks not shown.
+	Detector energy is being blurred by a  Gaussian
+	Energy resolution = 20.0%
+	Reference energy = 511.0
+	Detector is being modelled with perfect time-of-flight resolution
+
+ Binning Parameters for PETblock.base.binparms
+
+	 Binning parameters are ordered by:
+	 slowest varying to fastest (top of this list to bottom).
+
+	  Random events are being rejected.
+
+	  All scatter states (primary, scatter) stored together.
+	  Number of scatter bins = 1, range = [0, 100] (# of scatters)
+	  Number of energy (1) bins = 1, range = [375.00, 650.00] (keV)
+	  Number of energy (2) bins = 1, range = [375.00, 650.00] (keV)
+	  Crystal vs. crystal binning (binned in upper triangle):
+	  Number of crystal*crystal bins = 72 * 72
+
+	  Add to existing images is false.
+
+	  Weight data is being summed in double precision
+	  Weight image format is four byte reals.
+	  Weight image file name is '../PETblock.base.wt'
+
+	  Weight squared image format is four byte reals.
+	  Weight squared image file name is '../PETblock.base.wtsq'
+
+	  Count image format is four byte integers.
+	  Count image file name is '../PETblock.base.ct'
+
+***************** Simulation Beginning *************
+  10% tracked,	CPU Time =     168 seconds	(09:22 AM - 04/06/11).
+  20% tracked,	CPU Time =     337 seconds	(09:28 AM - 04/06/11).
+  30% tracked,	CPU Time =     504 seconds	(09:31 AM - 04/06/11).
+  40% tracked,	CPU Time =     671 seconds	(09:34 AM - 04/06/11).
+  50% tracked,	CPU Time =     839 seconds	(09:37 AM - 04/06/11).
+  60% tracked,	CPU Time =    1006 seconds	(09:40 AM - 04/06/11).
+  70% tracked,	CPU Time =    1173 seconds	(09:42 AM - 04/06/11).
+  80% tracked,	CPU Time =    1341 seconds	(09:45 AM - 04/06/11).
+  90% tracked,	CPU Time =    1508 seconds	(09:48 AM - 04/06/11).
+ 100% tracked,	CPU Time =    1676 seconds	(09:51 AM - 04/06/11).
+
+***************** Simulation Finished *************
+
+
+
+Tracked 120000000 photons.
+
+Real time for calculating time bin decays = 0.0 seconds.
+Real time for tracking photons = 1675.6 seconds.
+Total CPU time for calculating time bin decays = 0.0 seconds.
+Total CPU time for tracking photons  = 1675.6. seconds
+
+CPU time for simulation =  1675.6.
+Execution of PHG finished on 04 06 2011 (09:51:19 AM)
+
+
+***************** Detected Photon Statistics *************
+
+Total blue photons entering detector module = 7938264.
+Total pink photons entering detector module = 7938264.
+Total photons depositing energy in detector = 6186940.
+Total photons absorbed in detector = 4822860.
+Total weight absorbed in detector = 1.19e+06.
+Total photons forced to absorb in detector = 0.
+Total weight forced to absorb in detector = 0.00e+00.
+Total first interaction absorptions = 2059992.
+Total weight of first interaction absorptions = 5.08e+05.
+Total photons passing through detectors without interacting = 4406391.
+Weight decremented for FI = 0.00e+00
+	
+
+****************************************************************
+
+
+***************** Processing Binning Data *************
+
+Total blue photons reaching the binning module in this simulation = 4058051
+Total pink photons reaching the binning module in this simulation = 2128889
+
+Total coincidences reaching the binning module in this simulation = 2128889
+Total accepted blue photons in this simulation = 1451341
+Total accepted pink photons in this simulation = 985244
+Total accepted coincidences in this simulation = 985244
+Sum of accepted coincidence weights in this simulation = 2.430269e+05
+Sum of accepted coincidence squared weights in this simulation = 5.994662e+04
+Quality factor in image data = 1.00e+00
+
+Writing count image.
+Writing weight image.
+	Converting weight file to single precision, this may take a while.
+Writing weight squared image.
+	Converting weight squared file to single precision, this may take a while.
+
+***************** Finished Processing Binning Data *************

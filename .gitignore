@@ -34,7 +34,12 @@
 
 # Folders
 singles2randoms4d_castor/
-castor
+castor/File_test_castor
+castor/build
+castor/install/*
+2.9.2_new_mat_table/obj/*
+2.9.2_new_mat_table/phg.data/coh.tables/*
+2.9.2_new_mat_table/phg.data/phg_att_table
 
 # additional files
 program_names.odt

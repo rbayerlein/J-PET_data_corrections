@@ -1,0 +1,25 @@
+
+***********************
+About to process parameter file 'randPET.base.tsparms'
+
+***********************
+
+
+
+Command line: ../../../../../2.9/bin/timesort -d randPET.base.tsparms 
+
+Execution of timesort occurred on 15-Apr-2009 (22:29:59)
+Using detector history files.
+Sorting input file:
+  'randPET.base.dethist'
+  into output file:
+  'randPET.base.dethist.srtd'.
+Buffer size is 200 megabytes.
+
+Beginning creation of intermediate subfiles...
+ 9 subfiles created (3136 MB),  CPU seconds = 1184672  (22:33  15-Apr-09).
+Created 9 sorted subfiles, now to be merged...
+ Merging subfiles 1-9,  (22:33  15-Apr-09).
+Final file and sorting process now completed.
+
+Execution of timesort finished on 15-Apr-2009 (22:37:26)

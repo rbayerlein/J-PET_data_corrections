@@ -143,10 +143,13 @@ int main(int argc, char* argv[]) {
  			int axBiA = plm->axIDA / (N_AX_CRYS_PER_BLK);
 			int axBiB = plm->axIDB / (N_AX_CRYS_PER_BLK);
 
+			//cout << axBiA << "\t" << axBiB << "\t" << txBiA << "\t" << txBiB << "\t";
+
                         //cout << "Reading Listmode "<<txBiA<<"B "<<txBiB<< endl;
                         
 			int idx_tx_blk = blk_idx[txBiA][txBiB]; // transaxial sinogram index ,78x78
 			int idx_tx_blk_reverse = blk_idx[txBiB][txBiA]; // transaxial sinogram index ,78x78,reverse direction
+			//cout << idx_tx_blk << "\t" << idx_tx_blk_reverse << "\t";
                         int ind_blk_sino;
                         if (idx_tx_blk!=-1){
                          	ind_blk_sino = idx_tx_blk + SIZEOF_SINO * axBiA
@@ -159,6 +162,7 @@ int main(int argc, char* argv[]) {
                         ind_blk_sino = idx_tx_blk + SIZEOF_SINO * axBiA
 				+ SIZEOF_SINO * N_AX_BLK * axBiB+ SIZEOF_SINO * N_AX_BLK * N_AX_BLK*(TOF_AB+tof_offset);
 						}
+						//cout << ind_blk_sino << endl;
                         //else {read_count_outof_traxial_tof++;}
                        
                         //cout << "Reading ind_blk_sino "<<ind_blk_sino<< endl;

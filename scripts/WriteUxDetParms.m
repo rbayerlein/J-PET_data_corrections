@@ -24,7 +24,7 @@ fprintf(fid,'%s%d\n','NUM_ELEMENTS_IN_LIST blocktomo_num_rings = ',n_units);
 for i0 = 0:n_units-1 % 0-index
     fprintf(fid,'%s%d\n','#Ring ',i0);
     fprintf(fid,'\t%s\n','NUM_ELEMENTS_IN_LIST blocktomo_ring_description_list = 3');
-    fprintf(fid,'\t\t%s\n','STR blocktomo_ring_parameter_file = "/data/4/users/mdas/Softwares/simset/2.9.2_new_mat_table/repo/scanner/modularjpet/modular4.ringparms"');
+    fprintf(fid,'\t\t%s\n','STR blocktomo_ring_parameter_file = "@simset/repo/scanner/modularjpet/modular4.ringparms"');
     fprintf(fid,'\t\t%s%f\n','REAL blocktomo_ring_axial_shift = ',0);
     fprintf(fid,'\t\t%s\n','REAL blocktomo_ring_transaxial_rotation = 7.5');
     ax_pos = 0; % cm
